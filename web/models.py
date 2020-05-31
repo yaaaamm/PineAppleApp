@@ -5,8 +5,8 @@ from django.utils.timezone import now
 
 class Person(models.Model):
     createdAt = models.DateTimeField("Created At", auto_now_add=True)
-    first_name = models.CharField("Имя", max_length=30, blank=True, null=True)
-    last_name = models.CharField("Фамилия", max_length=30, blank=True, null=True)
+    first_name = models.CharField("Имя", max_length=30)
+    last_name = models.CharField("Фамилия", max_length=30)
     middle_name = models.CharField("Отчество", max_length=30, blank=True, null=True)
     date_birthday = models.DateField("Дата рождения", blank=True, null=True)
     person_characteristic = models.TextField("Характеристика", blank=True, null=True)

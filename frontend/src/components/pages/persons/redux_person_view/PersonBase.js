@@ -91,13 +91,19 @@ class PersonBase extends Component{
 
 
     render() {
-        const {first_name, last_name, middle_name, date_birthday, person_characteristic}=this.props.person_details.person;
+        const {first_name, last_name, middle_name, date_birthday, person_characteristic, person_comment, person_negative}=this.props.person_details.person;
     return (
             <div className="container">
                 <div className="container">
                     <h2>{first_name} {last_name} {middle_name} </h2>
+                    <div className="text-right">
+                       <button className="btn btn-outline-info">
+                        <i className="fas fa-edit"></i></button>
+                   </div>
                     <p>Дата рождения: {date_birthday}  </p>
                     <p>Характеристика: {person_characteristic}</p>
+                    <p>Комментарий: {person_comment}</p>
+                    <p>Негатив: { person_negative}</p>
                 </div>
                 {Object.entries(this.props.person_details).map(([key, value]) => {
                     if (key !== 'person') {

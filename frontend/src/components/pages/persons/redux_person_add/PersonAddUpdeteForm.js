@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {Button}  from "react-bootstrap";
 import {connect} from "react-redux";
+import classnames from 'classnames'
 import {object} from "prop-types";
 import {AddPerson} from "../../../../action/person/persons";
 
@@ -13,6 +14,7 @@ class PersonAddUpdate extends Component {
         person_characteristic: '',
         person_comment: '',
         person_negative: '',
+        errors: {},
     };
 
     componentDidMount() {
@@ -31,11 +33,19 @@ class PersonAddUpdate extends Component {
 
     };
 
-    handleClick = () => {
-        let isValid=false
-        const {AddPerson}=this.props;
-
-        AddPerson(this.state);
+    handleClick = (e) => {
+        e.preventDefault();
+        // validation
+        let errors = {};
+        if (this.state.first_name ==='') errors.first_name = "Не должно быть пустое";
+        if (this.state.last_name ==='') errors.last_name = "Не должно быть пустое";
+        this.setState({ errors })
+        const isValid = Object.keys(errors).length === 0;
+        console.log(isValid)
+        if (isValid) {
+            const {AddPerson}=this.props;
+            AddPerson(this.state);
+        }
     };
 
 
@@ -43,24 +53,30 @@ class PersonAddUpdate extends Component {
     render() {
         return (
             <React.Fragment>
-                <form action="" onSubmit={this.props.AddPerson}>
+                <form action="" onSubmit={this.handleClick}>
                     <div className="form-group">
                         <label htmlFor="first_name" >Имя</label>
-                        <input className="form-control"
+                        <input className={classnames("form-control", { "is-invalid": !!this.state.errors.first_name})}
                                type="text"
                                name="first_name"
                                value={this.state.first_name}
                                onChange={this.onChange}
                         />
-                    </div>
+                        <div className="invalid-feedback">
+                            {this.state.errors.first_name}
+                        </div>
+                       </div>
                     <div className="form-group">
                         <label htmlFor="last_name" >Фамилия</label>
-                        <input className="form-control"
+                        <input className={classnames("form-control", { "is-invalid": !!this.state.errors.last_name})}
                                type="text"
                                name="last_name"
                                value={this.state.last_name}
                                onChange={this.onChange}
                         />
+                         <div className="invalid-feedback">
+                            {this.state.errors.last_name}
+                        </div>
                     </div>
                     <div className="form-group">
                         <label htmlFor="middle_name">Отчество</label>
@@ -109,7 +125,7 @@ class PersonAddUpdate extends Component {
                         ></textarea>
                     </div>
                     <div className="text-right">
-                        <Button Button variant="primary" onClick={ this.handleClick }>Сохранить</Button>
+                        <button className="btn btn-primary">Сохранить</button>
                     </div>
                 </form>
             </React.Fragment>)

@@ -8,7 +8,7 @@ import PersonBase from "./components/pages/persons/redux_person_view/PersonBase"
 import { Provider } from 'react-redux';
 //import store from './store';
 import Footer from "./components/layout/footer";
-import PersonAddUpdate from "./components/pages/persons/redux_person_add/PersonAdd";
+import PersonAddUpdate from "./components/pages/persons/redux_person_add/PersonAddUpdeteForm";
 import { ConnectedRouter } from 'connected-react-router'
 import configureStore, { history } from './store'
 
