@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Добавление нового контакта {% endblock %}
+
+{% block content %}
+    <h1>Основное</h1>
+    <form method="POST" action="/add_person">
+        {% csrf_token %}
+        <div class="form-group row">
+            <label for="first_name" class="col-sm-2 col-form-label">Имя</label>
+            <div class="col-sm-10">
+                <input class="form-control" type="text" name="first_name" />
+
+                <input type="text" name="last_name" placeholder="Фамилия" />
+                <br />
+                <br />
+                <input type="text" name="middle_name" placeholder="Отчество" />
+                <br />
+                <br />
+                <input type="date" name="date_birthday" placeholder="Дата рождения" />
+                <br />
+                <br />
+                <textarea name="person_characteristic" placeholder="Характеристика"></textarea>
+                <br />
+                <br />
+                <input type="submit" value="Добавить" />
+        </div>
+    </form>
+{% endblock %}

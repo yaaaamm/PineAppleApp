@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}{{ person.first_name }} {% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="container">
+            <h2>{{ person.last_name }} {{ person.first_name }} {{ person.middle_name }}</h2>
+            <p>Дата рождения: {{ person.date_birthday }}</p>
+            <p>Характеристика: {{ person.person_characteristic }}</p>
+        </div>
+         {% include 'previous_last_name.html' with posts=postdata %}
+        <p></p>
+        {% include 'address.html' with posts=postdata %}
+        <p></p>
+        {% include 'person_educations.html' with posts=postdata %}
+        <p></p>
+        {% include 'person_social_net.html' with posts=postdata %}
+        <p></p>
+        {% include 'person_family_ties.html' with posts=postdata %}
+    <p><b> {{ error }} </b></p>
+    </div>
+{% endblock %}

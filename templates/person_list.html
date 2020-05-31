@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Список людей{% endblock %}
+
+{% block content %}
+    <div class="form-group"></div>
+        <p> {{ error }} </p>
+        <h2>Список людей</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">ФИО</th>
+                    <th scope="col">Дата</th>
+                </tr>
+             </thead>
+            <tbody>
+            {% for person in persons %}
+                <tr>
+                    <td>{{ person.id }}</td>
+                    <td><a href="/person/{{ person.id }}">{{ person.last_name }} {{ person.first_name }} {{ person.middle_name }}</a></td>
+                    <td>{{ person.createdAt }}</td>
+                </tr>
+           {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

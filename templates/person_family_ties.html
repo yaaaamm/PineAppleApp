@@ -1,0 +1,90 @@
+{% block form_adress %}
+<div class="card card-body">
+    <h6>Родственные связи:</h6>
+    {% if person_family_ties %}
+    <table class="table table-sm table-striped">
+        <tr>
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Степень родства</th>
+                <th scope="col">Имя</th>
+                <th scope="col">Фамилия</th>
+                <th scope="col">Отчество</th>
+                <th scope="col">Дата рождения</th>
+                <th scope="col">Ссылка на соц. сеть</th>
+                <th scope="col">Место работы</th>
+                <th scope="col">Должность</th>
+                <th scope="col" class="text-right">Действие</th>
+            </tr>
+            </thead>
+            {% for person_family_tie in person_family_ties %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ person_family_tie.family_tie_relation }}</td>
+            <td>{{ person_family_tie.family_tie_first_name }}</td>
+            <td>{{ person_family_tie.family_tie_last_name }}</td>
+            <td>{{ person_family_tie.family_tie_middle_name }}</td>
+            <td>{{ person_family_tie.family_tie_date_birthday }}</td>
+            <td>{{ person_family_tie.family_tie_link_social_net  }}</td>
+            <td>{{ person_family_tie.family_tie_job }}</td>
+            <td>{{ person_family_tie.family_tie_working_position }}</td>
+            <td class="text-right"><a class="btn btn-danger btn-sm"
+                   href="/delete_person_family_tie/{{ person_family_tie.id }}"><i class="far fa-trash-alt"></i>
+</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+    <p class="text-right">
+        <button class="btn btn-primary btn-sm" type="button" data-toggle="collapse"
+                data-target="#collapseFamilyTies" aria-expanded="false" aria-controls="collapseFamilyTies">
+            Добавить +
+        </button>
+    </p>
+    <div class="collapse" id="collapseFamilyTies">
+        <div class="card card-body">
+            <form method="POST" action="/add_person_family_tie/{{ number }}">
+                {% csrf_token %}
+                 <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="PersonFamilyTieRelation">Степень родства</label>
+                            <input type="text" class="form-control" name="family_tie_relation" placeholder="Отец\Сестра..." id="PersonFamilyTieRelation">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="PersonFamilyTieFirstName">Имя</label>
+                            <input type="text" class="form-control" name="family_tie_first_name" id="PersonFamilyTieFirstName">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="PersonFamilyTieLastName">Фамилия</label>
+                            <input type="text" class="form-control" name="family_tie_last_name" id="PersonFamilyTieLastName">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="PersonFamilyTieMiddleName">Отчество</label>
+                            <input type="text" class="form-control" name="family_tie_middle_name" id="PersonFamilyTieMiddleName">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-2">
+                            <label for="PersonFamilyTieRelation">Дата рождения</label>
+                            <input type="date" class="form-control" name="family_tie_date_birthday" id="PersonFamilyTieRelation">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="PersonFamilyTieFirstName">Ссылка на соцсеть</label>
+                            <input type="text" class="form-control" name="family_tie_link_social_net" id="PersonFamilyTieFirstName">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="PersonFamilyTieLastName">Место работы</label>
+                            <input type="text" class="form-control" name="family_tie_job" id="PersonFamilyTieLastName">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="PersonFamilyTieMiddleName">Должность</label>
+                            <input type="text" class="form-control" name="family_tie_working_position" id="PersonFamilyTieMiddleName">
+                        </div>
+                    </div>
+                <button type="submit" class="btn btn-primary btn-sm">Добавить</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

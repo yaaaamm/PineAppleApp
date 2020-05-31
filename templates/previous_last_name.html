@@ -1,0 +1,45 @@
+{% block form_adress %}
+<div class="card card-body">
+     <h6>Предыдущая фамилия:</h6>
+    {% if previous_last_names %}
+    <table class="table table-sm table-striped">
+        <tr>
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Предыдущая фамилия</th>
+                <th scope="col" class="text-right">Действие</th>
+            </tr>
+            </thead>
+            {% for previous_last_name in previous_last_names %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ previous_last_name.last_name }}</td>
+            <td class="text-right"><a class="btn btn-danger btn-sm"
+                   href="/delete_previous_last_name/{{ previous_last_name.id }}"><i class="far fa-trash-alt"></i></a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+    <p class="text-right">
+        <button class="btn btn-primary btn-sm" type="button" data-toggle="collapse"
+                data-target="#collapsePreviousLastName" aria-expanded="false" aria-controls="collapsePreviousLastName">
+            Добавить +
+        </button>
+    </p>
+    <div class="collapse" id="collapsePreviousLastName">
+        <div class="card card-body">
+            <form class="form-inline" method="POST" action="/add_previous_last_name/{{ number }}">
+                {% csrf_token %}
+                <div class="form-group mb-2">
+                    <label for="previous_last_name">Добавить фамилию:</label>
+                </div>
+                <div class="form-group mx-sm-3 mb-2">
+                    <input type="text" class="form-control form-control-sm" name="previous_last_name"/>
+                </div>
+                <button type="submit" class="btn btn-primary mb-2 btn-sm">Добавить</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

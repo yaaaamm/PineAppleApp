@@ -1,0 +1,88 @@
+{% block form_adress %}
+    <div class="card card-body">
+    <h6>Адреса:</h6>
+    {% if person_addresses %}
+        <table class="table table-sm table-striped">
+            <tr>
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Страна</th>
+                    <th scope="col">Регион</th>
+                    <th scope="col">Округ</th>
+                    <th scope="col">Город</th>
+                    <th scope="col">Улица</th>
+                    <th scope="col">Дом</th>
+                    <th scope="col">Квартира</th>
+                    <th scope="col" class="text-right">Действие</th>
+                </tr>
+                </thead>
+
+                {% for person_address in person_addresses %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ person_address.country }}</td>
+                <td>{{ person_address.region }}</td>
+                <td>{{ person_address.district }}</td>
+                <td>{{ person_address.city }}</td>
+                <td>{{ person_address.street }}</td>
+                <td>{{ person_address.building }}</td>
+                <td>{{ person_address.flat }}</td>
+                <td class="text-right"><a class="btn btn-danger btn-sm" href="/delete_address/{{ person_address.id }}"><i class="far fa-trash-alt"></i>
+</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+        <p class="text-right">
+            <button class="btn btn-primary btn-sm" type="button" data-toggle="collapse"
+                    data-target="#collapseAddress" aria-expanded="false" aria-controls="collapseAddress">
+                Добавить +
+            </button>
+        </p>
+        <div class="collapse" id="collapseAddress">
+            <div class="card card-body">
+                <form method="POST" action="/add_address/{{ number }}">
+                    {% csrf_token %}
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="country">Страна</label>
+                            <input type="text" class="form-control" name="country" value="Россия">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="region">Регион</label>
+                            <input type="text" class="form-control" name="region">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="city">Город</label>
+                            <input type="text" class="form-control" name="city">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="region">Огруг</label>
+                            <input type="text" class="form-control" name="district">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-9">
+                            <label for="street">Улица</label>
+                            <input type="text" class="form-control" name="street">
+                        </div>
+                        <div class="form-group col-md-1">
+                            <label for="building">Дом</label>
+                            <input type="text" class="form-control" name="building">
+                        </div>
+                        <div class="form-group col-md-1">
+                            <label for="construction_number">Стр.</label>
+                            <input type="text" class="form-control" name="construction_number">
+                        </div>
+                        <div class="form-group col-md-1">
+                            <label for="flat">Квартира</label>
+                            <input type="text" class="form-control" name="flat">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-sm">Добавить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

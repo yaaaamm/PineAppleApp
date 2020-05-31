@@ -1,0 +1,52 @@
+{% block form_adress %}
+<div class="card card-body">
+    <h6>Социальные сети:</h6>
+    {% if person_social_nets %}
+    <table class="table table-sm table-striped">
+        <tr>
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Название соц. сети</th>
+                <th scope="col">Ссылка</th>
+                <th scope="col" class="text-right">Действие</th>
+            </tr>
+            </thead>
+            {% for person_social_net in person_social_nets %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ person_social_net.name_social_net }}</td>
+            <td><a href="{{ person_social_net.link_social_net }}" target="_blank">{{ person_social_net.link_social_net }}</a></td>
+            <td class="text-right"><a class="btn btn-danger btn-sm"
+                   href="/delete_person_social_net/{{ person_social_net.id }}"><i class="far fa-trash-alt"></i>
+</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+    <p class="text-right">
+        <button class="btn btn-primary btn-sm" type="button" data-toggle="collapse"
+                data-target="#collapsePersonSocialNet" aria-expanded="false" aria-controls="collapsePersonSocialNet">
+            Добавить +
+        </button>
+    </p>
+    <div class="collapse" id="collapsePersonSocialNet">
+        <div class="card card-body">
+            <form method="POST" action="/add_person_social_net/{{ number }}">
+                {% csrf_token %}
+                 <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="PersonNameSocialNet">Название соц. сети</label>
+                            <input type="text" class="form-control" name="name_social_net" placeholder="Instagram\VK.." id=PersonNameSocialNet">
+                        </div>
+                        <div class="form-group col-md-9">
+                            <label for="PersonLinkSocialNet">Ссылка</label>
+                            <input type="text" class="form-control" name="link_social_net" id="PersonLinkSocialNet">
+                        </div>
+                    </div>
+                <button type="submit" class="btn btn-primary btn-sm">Добавить</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
