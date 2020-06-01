@@ -1,12 +1,21 @@
 import React, {Component} from "react";
-import {Modal, Button}  from "react-bootstrap";
+import {Modal}  from "react-bootstrap";
 import {connect} from "react-redux";
 import {personSaveAddDetail, personUpdateDetail} from "../../../../action/person/person_detail";
 import {personCloseEditDetail} from "../../../../action/person/person_detail_edit";
 import getPersonDetailTableTitle, {main_titles} from "./PersonDetailConstTableTitles";
-import {object} from "prop-types";
+import PropTypes from "prop-types";
 
 class PersonDetailModal extends Component {
+          static propTypes = {
+              person: PropTypes.object.isRequired,
+              person_show_modal: PropTypes.object.isRequired,
+              personSaveAddDetail: PropTypes.func.isRequired,
+              personUpdateDetail: PropTypes.func.isRequired,
+              personCloseEditDetail: PropTypes.func.isRequired,
+};
+
+
     state={
         person_detail: this.props.person_show_modal.person_detail,
     };
@@ -70,27 +79,27 @@ class PersonDetailModal extends Component {
                                 { Object.entries(this.state.person_detail).map(([key, value]) => {
                                     if (key !== 'id' && key !== 'person') {
                                         if (key.indexOf("date_")>0)
-                                        {type = "date"}else{type = "text" }
+                                            {type = "date"}else{type = "text" }
                                         return (
-                                            <div className="form-group">
+                                            <div key = { key } className="form-group">
                                                 <label htmlFor={ key }
                                                        className="col-form-label">{ title[key] }:</label>
                                                 <input type={ type }
                                                        className="form-control"
-                                                       id={ key }
                                                        name={ key }
                                                        value={ value }
                                                        onChange={ this.onChange }
                                                 />
                                             </div>)
                                     }
+                                    return null
                                 }) }
                             </form>
                         </div>
                     </Modal.Body>
                     <Modal.Footer>
-                        <Button variant="secondary" onClick={ this.props.personCloseEditDetail }>Закрыть</Button>
-                        <Button Button variant="primary" onClick={ this.handleClick }>Сохранить</Button>
+                        <button className="btn btn-danger" onClick={ this.props.personCloseEditDetail }>Закрыть</button>
+                        <button className="btn btn-primary" onClick={ this.handleClick }>Сохранить</button>
                     </Modal.Footer>
                 </Modal>
             </React.Fragment>)
@@ -104,25 +113,6 @@ const mapStateToProps= state => (
 
     });
 
-/*function mapStateToProps(state){
-    if (state.person_detail_edit.person_show_modal.person_detail.id) {
-        return {
-            person_show_modal: state.person_detail_edit.person_show_modal
-        }
-    }
-    console.log(state.person_detail_edit.person_show_modal.person_detail)
-    let newObj = Object.fromEntries(Object.entries(state.person_detail_edit.person_show_modal.person_detail).map(([key,value]) => {
-        value="";
-            return ([key, value])
-    }))
-    console.log(newObj)
-    return {
-        person_show_modal: {
-            person_detail: newObj
-        }
-
-    }
-}*/
 
 
 export default connect(mapStateToProps, {

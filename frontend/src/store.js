@@ -1,4 +1,4 @@
-import { applyMiddleware, compose, createStore } from 'redux'
+import { applyMiddleware, createStore } from 'redux'
 import {composeWithDevTools} from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 import createRootReducer from './redusers';
@@ -9,7 +9,6 @@ import { createBrowserHistory } from 'history'
 
 export const history = createBrowserHistory();
 
-const initialState = {};
 
 const middleware =[thunk];
 

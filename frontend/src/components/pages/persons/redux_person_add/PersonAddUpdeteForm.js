@@ -1,26 +1,50 @@
 import React, {Component} from "react";
-import {Button}  from "react-bootstrap";
 import {connect} from "react-redux";
 import classnames from 'classnames'
-import {object} from "prop-types";
-import {AddPerson} from "../../../../action/person/persons";
+import PropTypes from "prop-types";
+import {addPerson, updatePerson } from "../../../../action/person/persons";
+import {getPersonDetails} from "../../../../action/person/person_detail";
 
 class PersonAddUpdate extends Component {
+    static propTypes ={
+        person: PropTypes.object.isRequired,
+        getPersonDetails: PropTypes.func.isRequired,
+        addPerson: PropTypes.func.isRequired,
+        updatePerson: PropTypes.func.isRequired,
+    };
+
     state={
-        first_name: '',
-        last_name: '',
-        middle_name: '',
-        date_birthday: null,
-        person_characteristic: '',
-        person_comment: '',
-        person_negative: '',
+        id: this.props.person ? this.props.person.id : null,
+        first_name: this.props.person ? this.props.person.first_name : '',
+        last_name: this.props.person ? this.props.person.last_name : '',
+        middle_name: this.props.person ? this.props.person.middle_name : '',
+        date_birthday: this.props.person ? this.props.person.date_birthday : null,
+        person_characteristic: this.props.person ? this.props.person.person_characteristic : '',
+        person_comment: this.props.person ? this.props.person.person_comment : '',
+        person_negative: this.props.person ? this.props.person.person_negative : '',
         errors: {},
     };
+
+    componentDidUpdate(prevProps, prevState) {
+        if (this.props.person && (this.props.person.id !== prevProps.person.id)) {
+            this.setState({
+                id: this.props.person.id,
+                first_name: this.props.person.first_name,
+                last_name: this.props.person.last_name,
+                middle_name: this.props.person.middle_name,
+                date_birthday: this.props.person.date_birthday,
+                person_characteristic: this.props.person.person_characteristic,
+                person_comment: this.props.person.person_comment,
+                person_negative: this.props.person.person_negative,
+            });
+        }
+    }
+
 
     componentDidMount() {
         const {match: {params}}=this.props;
         if (params && params.id) {
-            this.props.getPerson(params.id);
+            this.props.getPersonDetails(params.id);
         }
     }
 
@@ -28,10 +52,6 @@ class PersonAddUpdate extends Component {
                 [e.target.name]: e.target.value
         });
 
-    onUpdate = () => {
-        this.props.personUpdateDetail(this.state.person_detail, this.props.person_show_modal.title_for);
-
-    };
 
     handleClick = (e) => {
         e.preventDefault();
@@ -39,12 +59,16 @@ class PersonAddUpdate extends Component {
         let errors = {};
         if (this.state.first_name ==='') errors.first_name = "Не должно быть пустое";
         if (this.state.last_name ==='') errors.last_name = "Не должно быть пустое";
-        this.setState({ errors })
+        this.setState({ errors });
         const isValid = Object.keys(errors).length === 0;
-        console.log(isValid)
+        console.log(isValid);
         if (isValid) {
-            const {AddPerson}=this.props;
-            AddPerson(this.state);
+            const {addPerson, updatePerson}=this.props;
+            if (this.state.id){
+                updatePerson(this.state);
+            }else {
+                addPerson(this.state);
+            }
         }
     };
 
@@ -53,29 +77,29 @@ class PersonAddUpdate extends Component {
     render() {
         return (
             <React.Fragment>
-                <form action="" onSubmit={this.handleClick}>
+                <form action="" onSubmit={ this.handleClick }>
                     <div className="form-group">
-                        <label htmlFor="first_name" >Имя</label>
-                        <input className={classnames("form-control", { "is-invalid": !!this.state.errors.first_name})}
+                        <label htmlFor="first_name">Имя</label>
+                        <input className={ classnames("form-control", {"is-invalid": !!this.state.errors.first_name}) }
                                type="text"
                                name="first_name"
-                               value={this.state.first_name}
-                               onChange={this.onChange}
+                               value={ this.state.first_name }
+                               onChange={ this.onChange }
                         />
                         <div className="invalid-feedback">
-                            {this.state.errors.first_name}
+                            { this.state.errors.first_name }
                         </div>
-                       </div>
+                    </div>
                     <div className="form-group">
-                        <label htmlFor="last_name" >Фамилия</label>
-                        <input className={classnames("form-control", { "is-invalid": !!this.state.errors.last_name})}
+                        <label htmlFor="last_name">Фамилия</label>
+                        <input className={ classnames("form-control", {"is-invalid": !!this.state.errors.last_name}) }
                                type="text"
                                name="last_name"
-                               value={this.state.last_name}
-                               onChange={this.onChange}
+                               value={ this.state.last_name }
+                               onChange={ this.onChange }
                         />
-                         <div className="invalid-feedback">
-                            {this.state.errors.last_name}
+                        <div className="invalid-feedback">
+                            { this.state.errors.last_name }
                         </div>
                     </div>
                     <div className="form-group">
@@ -83,8 +107,8 @@ class PersonAddUpdate extends Component {
                         <input className="form-control"
                                type="text"
                                name="middle_name"
-                               value={this.state.middle_name}
-                               onChange={this.onChange}
+                               value={ this.state.middle_name }
+                               onChange={ this.onChange }
                         />
                     </div>
                     <div className="form-group">
@@ -92,8 +116,8 @@ class PersonAddUpdate extends Component {
                         <input className="form-control"
                                type="date"
                                name="date_birthday"
-                               value={this.state.date_birthday}
-                               onChange={this.onChange}
+                               value={ this.state.date_birthday || "" }
+                               onChange={ this.onChange }
                         />
                     </div>
                     <div className="form-group">
@@ -101,28 +125,28 @@ class PersonAddUpdate extends Component {
                         <textarea className="form-control"
                                   name="person_characteristic"
                                   rows="3"
-                                  value={this.state.person_characteristic}
-                                  onChange={this.onChange}
+                                  value={ this.state.person_characteristic || "" }
+                                  onChange={ this.onChange }
                         >
                         </textarea>
                     </div>
                     <div className="form-group">
                         <label htmlFor="person_comment">Комментарий</label>
                         <textarea className="form-control"
-                                  name="person_comment"
-                                  rows="3"
-                                  value={this.state.person_comment}
-                                  onChange={this.onChange}
-                        ></textarea>
+                                    name="person_comment"
+                                    rows="3"
+                                    value={ this.state.person_comment || "" }
+                                    onChange={ this.onChange }
+                                    />
                     </div>
                     <div className="form-group">
                         <label htmlFor="person_negative">Негатив</label>
                         <textarea className="form-control"
                                   name="person_negative"
                                   rows="3"
-                                  value={this.state.person_negative}
-                                  onChange={this.onChange}
-                        ></textarea>
+                                  value={ this.state.person_negative || "" }
+                                  onChange={ this.onChange }
+                        />
                     </div>
                     <div className="text-right">
                         <button className="btn btn-primary">Сохранить</button>
@@ -133,25 +157,16 @@ class PersonAddUpdate extends Component {
 }
 
 
-/*function mapStateToProps(state){
-    if (state.person_detail_edit.person_show_modal.person_detail.id) {
+function mapStateToProps (state, props) {
+    const {match: {params}}=props;
+    if (params && params.id) {
         return {
-            person_show_modal: state.person_detail_edit.person_show_modal
+            person: state.person_details.person_details.person,
+            }
         }
-    }
-    console.log(state.person_detail_edit.person_show_modal.person_detail)
-    let newObj = Object.fromEntries(Object.entries(state.person_detail_edit.person_show_modal.person_detail).map(([key,value]) => {
-        value="";
-            return ([key, value])
-    }))
-    console.log(newObj)
-    return {
-        person_show_modal: {
-            person_detail: newObj
-        }
-
-    }
-}*/
+    return {person: {}}
+};
 
 
-export default connect(null, {AddPerson})(PersonAddUpdate);
+
+export default connect(mapStateToProps, { getPersonDetails,addPerson, updatePerson})(PersonAddUpdate);

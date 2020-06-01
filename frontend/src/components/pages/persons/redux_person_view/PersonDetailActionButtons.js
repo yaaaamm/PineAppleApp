@@ -1,21 +1,24 @@
 import React, {Component} from 'react';
-import {getPersonDetails, personDeleteDetail, personToggleDetail} from '../../../../action/person/person_detail';
+import {getPersonDetails, personDeleteDetail} from '../../../../action/person/person_detail';
 import {personOpenEditDetail} from '../../../../action/person/person_detail_edit'
 import {connect} from "react-redux";
+import PropTypes from "prop-types";
 
 class PersonDetailActionButtons extends Component {
+      static propTypes = {
+          person_details: PropTypes.object.isRequired,
+          getPersonDetails: PropTypes.func.isRequired,
+          personDeleteDetail: PropTypes.func.isRequired,
+          personOpenEditDetail: PropTypes.func.isRequired,
+};
+
 
     getStyleOnEdit=(editMode) => {
         return {
             marginRight: '2px',
             display: editMode ? 'none' : 'inline-block'
         }
-    }
-    getStyleOnEditConfirm=(editMode) => {
-        return {
-            marginRight: '2px', display: !editMode ? 'none' : 'inline-block'
-        }
-    }
+    };
 
 
     render() {

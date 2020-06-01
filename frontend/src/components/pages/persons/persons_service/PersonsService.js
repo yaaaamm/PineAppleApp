@@ -3,9 +3,6 @@ const API_URL = 'http://localhost:8000';
 
 export default class PersonsService{
 
-    constructor(){}
-
-
     getPersons() {
         const url = `${API_URL}/person_list/`;
         return axios.get(url).then(response => response.data);

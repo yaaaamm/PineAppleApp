@@ -3,7 +3,7 @@ import {
     CLOSE_EDIT_PERSON_DETAIL,
     OPEN_ADD_PERSON_DETAIL
 } from "../action/person/types";
-import getPersonDetailTableTitle from "../components/pages/persons/redux_person_view/PersonDetailConstTableTitles";
+
 
 const initialState = {
     person_show_modal: {

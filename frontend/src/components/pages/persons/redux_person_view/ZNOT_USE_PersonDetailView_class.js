@@ -4,6 +4,8 @@ import {connect} from "react-redux";
 import {getPersonDetails} from "../../../../action/person/person_detail";
 
 class PersonDetailView extends Component {
+
+
     render() {
         console.log(props.data)
         return (

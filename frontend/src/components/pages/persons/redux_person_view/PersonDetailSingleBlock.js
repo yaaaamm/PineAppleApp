@@ -1,17 +1,28 @@
 import React, {Component} from "react";
 import PersonDetailViewTableHeaders from './PersonDetailViewTableHeaders';
 import PersonDetailViewTableBody from "./PersonDetailViewTableBody";
-import Modal from 'react-modal'
 import PersonDetailActionButtons from "./PersonDetailActionButtons";
 import PersonDetailModal from "./PersonDetailModal"
 import {connect} from "react-redux";
 import {getPersonDetails, personDeleteDetail} from "../../../../action/person/person_detail";
 import {personCloseEditDetail, personOpenAddDetail, personOpenEditDetail} from '../../../../action/person/person_detail_edit'
-import getPersonDetailTableTitle, {main_titles} from "./PersonDetailConstTableTitles";
+import  {main_titles} from "./PersonDetailConstTableTitles";
+import PropTypes from "prop-types";
 
 
 
 class PersonDetailSingleBlock extends Component {
+
+    static propTypes = {
+        person: PropTypes.object.isRequired,
+        person_show_modal: PropTypes.object.isRequired,
+        getPersonDetails: PropTypes.func.isRequired,
+        personDeleteDetail: PropTypes.func.isRequired,
+        personCloseEditDetail: PropTypes.func.isRequired,
+        personOpenAddDetail: PropTypes.func.isRequired,
+        personOpenEditDetail: PropTypes.func.isRequired,
+};
+
 
     showModal=(display) => {
         if (display) {
@@ -21,7 +32,7 @@ class PersonDetailSingleBlock extends Component {
             return (
                 <div></div>)
         }
-    }
+    };
 
     render() {
         return (

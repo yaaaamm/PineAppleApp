@@ -4,15 +4,22 @@ import  { Link } from 'react-router-dom'
 
 function Header() {
     return(
-        <div className="container">
             <header>
-                <nav className="nav justify-content-center">
-                    <Link className="nav-link" to="/">Главная</Link>
+                <div className="container mt-10">
+                <ul className="nav nav-pills nav-fill">
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/">Главная</Link>
+                    </li>
+                     <li className="nav-item">
                     <Link className="nav-link" to="/person_add">Добавить контакт</Link>
-                    <Link className="nav-link active" to="/person_list">Список контактов</Link>
-                </nav>
+                     </li>
+                    <li className="nav-item">
+                    <Link className="nav-link" to="/person_list">Список контактов</Link>
+                    </li>
+                    </ul>
+                    </div>
             </header>
-        </div>
+
     )
 }
 

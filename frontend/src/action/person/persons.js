@@ -1,7 +1,5 @@
-import history from '../../history'
 import axios from 'axios';
-import { GET_PERSONS, ADD_PERSON, UPDATE_PERSON } from './types';
-import store from "../../store";
+import { GET_PERSONS, ADD_PERSON} from './types';
 import { push } from 'connected-react-router'
 
 
@@ -18,9 +16,9 @@ export const getPersons = () => dispatch => {
                 payload: response.data
             });
         }).catch(err=>console.log(err))
-    }
+    };
 
-export const AddPerson = (data) => dispatch => {
+export const addPerson = (data) => dispatch => {
         const url = `${API_URL}/person_add/`;
         return axios.post(url, {
                 data: data
@@ -30,8 +28,13 @@ export const AddPerson = (data) => dispatch => {
                 type: ADD_PERSON,
                 payload: response.data
             });
-            console.log(response.data)
             dispatch(push(`/person/${response.data.id}`))
         }).catch(err=>console.log(err))
     };
 
+export const updatePerson = (data) => dispatch => {
+        const url = `${API_URL}/person/${data.id}`;
+        return axios.put(url,data).then(response =>
+        dispatch(push(`/person/${response.data.id}`))
+        ).catch(err=>console.log(err))
+    };

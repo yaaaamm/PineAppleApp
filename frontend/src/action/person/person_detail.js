@@ -12,7 +12,7 @@ const API_URL = 'http://localhost:8000';
 
 //
 export const getPersonDetails = (id) => dispatch => {
-        const url = `${API_URL}/person/${id}`;
+        const url = `${API_URL}/person_detail/${id}`;
         return axios.get(url).then(response =>
         {
             dispatch({

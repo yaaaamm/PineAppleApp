@@ -1,6 +1,6 @@
 import React from "react";
 
-function PersonDetailEditTableBody(props) {
+function ZNOT_USE_PersonDetailEditTableBody(props) {
     return (
         <React.Fragment>
 
@@ -19,4 +19,4 @@ function PersonDetailEditTableBody(props) {
         </React.Fragment>);
 }
 
-export default PersonDetailEditTableBody;
+export default ZNOT_USE_PersonDetailEditTableBody;

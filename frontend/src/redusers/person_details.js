@@ -9,7 +9,7 @@ const initialState ={
 };
 
 export default function (state = initialState, action) {
-    let new_person_details = {}
+    let new_person_details = {};
     switch (action.type) {
         case GET_PERSON_DETAILS:
             return {

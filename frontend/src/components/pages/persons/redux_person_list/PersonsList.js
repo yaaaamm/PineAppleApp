@@ -6,7 +6,8 @@ import { getPersons } from '../../../../action/person/persons';
 
 export class PersonsList extends Component {
     static propTypes = {
-        persons: PropTypes.array.isRequired
+        persons: PropTypes.array.isRequired,
+        getPersons: PropTypes.func.isRequired,
     };
 
 

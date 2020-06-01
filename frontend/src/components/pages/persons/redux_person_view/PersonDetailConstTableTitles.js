@@ -88,19 +88,19 @@ const person_social_relations_cm ={
 };
 const person_social_relations_group_vk ={
     social_relations_vk_link_group: 'Ссылка на группы',
-    social_relations_vk_name_group: 'Имя',
+    social_relations_vk_name_group: 'Название группы',
 };
 const person_social_relations_group_fb ={
     social_relations_fb_link_group: 'Ссылка на группы',
-    social_relations_fb_name_group: 'Имя',
+    social_relations_fb_name_group: 'Название группы',
 };
 const person_social_relations_group_inst ={
     social_relations_inst_link_group: 'Ссылка на группы',
-    social_relations_inst_name_group: 'Имя',
+    social_relations_inst_name_group: 'Название группы',
 };
 const person_social_relations_group_cm ={
     social_relations_cm_link_group: 'Ссылка на группы',
-    social_relations_cm_name_group: 'Имя',
+    social_relations_cm_name_group: 'Название группы',
 };
 const person_ip ={
     ip_name: 'Название ИП',

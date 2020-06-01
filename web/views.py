@@ -13,6 +13,20 @@ from web.models import *
 def index(request):
     return render(request, '../templates/index.html')
 
+@api_view(['GET', 'PUT', 'DELETE'])
+def person(request, id):
+    try:
+        person = Person.objects.get(id=id)
+    except Person.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'PUT':
+        serializer = PersonSerializer(person, data=request.data, context={'request': request})
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
 
 @api_view(['GET'])
 def person_list(request):
@@ -318,25 +332,6 @@ def add_person(request):
                date_birthday=date_birthday, person_characteristic=person_characteristic).save()
 
         return redirect('/person_list')
-
-
-def person(request, number):
-    error = ""
-    person_data = Person.objects.filter(id=number)
-    previous_last_names = РreviousLastName.objects.filter(person=person_data[0])
-    person_addresses = PersonAddress.objects.filter(person=person_data[0])
-    person_educations = PersonEducation.objects.filter(person=person_data[0])
-    person_social_nets = PersonSocialNet.objects.filter(person=person_data[0])
-    person_family_ties = PersonFamilyTies.objects.filter(person=person_data[0])
-    return render(request, 'person_base.html', {
-        'person': person_data[0],
-        'number': number,
-        'previous_last_names': previous_last_names,
-        'person_addresses': person_addresses,
-        'person_educations': person_educations,
-        'person_social_nets': person_social_nets,
-        'person_family_ties': person_family_ties,
-    })
 
 
 def add_previous_last_name(request, number):

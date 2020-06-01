@@ -8,7 +8,7 @@ function PersonDetailViewTableBody(props) {
                         return (
                             <td key={key}>{ value }</td>)
                     }
-
+                    return null
             })
             }
         </React.Fragment>);
