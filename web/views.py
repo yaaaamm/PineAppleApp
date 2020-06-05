@@ -193,15 +193,19 @@ def person_detail(request, id):
                 'person_social_net': person_social_net_serializer.data,
                 'person_family_ties': person_family_ties_serializer.data,
                 'person_fellow_traveler': person_fellow_traveler_serializer.data,
-                'person_social_relations_vk': person_social_relations_vk_serializer.data,
-                'person_social_relations_fb': person_social_relations_fb_serializer.data,
-                'person_social_relations_inst': person_social_relations_inst_serializer.data,
-                'person_social_relations_cm': person_social_relations_cm_serializer.data,
-                'person_social_relations_group_vk': person_social_relations_group_vk_serializer.data,
-                'person_social_relations_group_fb': person_social_relations_group_fb_serializer.data,
-                'person_social_relations_group_inst': person_social_relations_group_inst_serializer.data,
-                'person_social_relations_group_cm': person_social_relations_group_cm_serializer.data,
                 'person_ip': person_ip_serializer.data,
+                'person_social_relations': {
+                    'person_social_relations_vk': person_social_relations_vk_serializer.data,
+                    'person_social_relations_fb': person_social_relations_fb_serializer.data,
+                    'person_social_relations_inst': person_social_relations_inst_serializer.data,
+                    'person_social_relations_cm': person_social_relations_cm_serializer.data,
+                },
+                'person_social_relations_group': {
+                    'person_social_relations_group_vk':  person_social_relations_group_vk_serializer.data,
+                    'person_social_relations_group_fb': person_social_relations_group_fb_serializer.data,
+                    'person_social_relations_group_inst': person_social_relations_group_inst_serializer.data,
+                    'person_social_relations_group_cm': person_social_relations_group_cm_serializer.data,
+                },
             })
 
 

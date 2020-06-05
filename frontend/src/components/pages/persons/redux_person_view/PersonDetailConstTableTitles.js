@@ -15,9 +15,18 @@ export const main_titles ={
     person_social_relations_group_cm: 'Группы Одноклассники в которых состоит человек',
     person_ip: 'Данные об ИП',
 
-}
+};
 
-
+export const tab_titles ={
+    person_social_relations_vk: 'Друзья в VK',
+    person_social_relations_fb: 'Друзья в FB',
+    person_social_relations_inst: 'Друзья в Instagram',
+    person_social_relations_cm: 'Друзья в Одноклаcсниках',
+    person_social_relations_group_vk: 'Группы в VK',
+    person_social_relations_group_fb: 'Группы FB',
+    person_social_relations_group_inst: 'Группы в Instagram',
+    person_social_relations_group_cm: 'Группы в Одноклассниках',
+};
 
 const person_previous_last_names = {
     last_name: 'Фамилия',
@@ -62,12 +71,14 @@ const person_fellow_traveler ={
     fellow_traveler_date_trip: 'Дата поездки',
 };
 
+
 const person_social_relations_vk ={
     social_relations_vk_link_account: 'Ссылка на аккаунт в соц.сети',
     social_relations_vk_first_name: 'Имя',
     social_relations_vk_last_name: 'Фамилия',
     social_relations_vk_middle_name: 'Отчество',
 };
+
 const person_social_relations_fb ={
     social_relations_fb_link_account: 'Ссылка на аккаунт в соц.сети',
     social_relations_fb_first_name: 'Имя',

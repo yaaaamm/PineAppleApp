@@ -4,10 +4,13 @@ import classnames from 'classnames'
 import PropTypes from "prop-types";
 import {addPerson, updatePerson } from "../../../../action/person/persons";
 import {getPersonDetails} from "../../../../action/person/person_detail";
+import PersonConfirmActions from "../redux_person_view/PersonConfirmActions";
+import {Button, Confirm} from "semantic-ui-react";
+
 
 class PersonAddUpdate extends Component {
     static propTypes ={
-        person: PropTypes.object.isRequired,
+        person: PropTypes.any.isRequired,
         getPersonDetails: PropTypes.func.isRequired,
         addPerson: PropTypes.func.isRequired,
         updatePerson: PropTypes.func.isRequired,
@@ -23,6 +26,7 @@ class PersonAddUpdate extends Component {
         person_comment: this.props.person ? this.props.person.person_comment : '',
         person_negative: this.props.person ? this.props.person.person_negative : '',
         errors: {},
+        open: false,
     };
 
     componentDidUpdate(prevProps, prevState) {
@@ -72,12 +76,17 @@ class PersonAddUpdate extends Component {
         }
     };
 
-
+    deleteClick = (e) => {
+        e.preventDefault();
+        this.setState({ open: true })
+    };
+    handleConfirm = () => this.setState({  open: false })
+    handleCancel = () => this.setState({  open: false })
 
     render() {
         return (
             <React.Fragment>
-                <form action="" onSubmit={ this.handleClick }>
+                <form action="">
                     <div className="form-group">
                         <label htmlFor="first_name">Имя</label>
                         <input className={ classnames("form-control", {"is-invalid": !!this.state.errors.first_name}) }
@@ -149,9 +158,18 @@ class PersonAddUpdate extends Component {
                         />
                     </div>
                     <div className="text-right">
-                        <button className="btn btn-primary">Сохранить</button>
+                        <button className="btn btn btn-danger float-left" onClick ={ this.deleteClick }>Удалить</button>
+                        <button className="btn btn-primary"  onClick={ this.handleClick }>Сохранить</button>
                     </div>
+
                 </form>
+                 <div className="container">
+                        <Confirm
+                            open={ this.state.open }
+                            onCancel={ this.handleCancel }
+                            onConfirm={ this.handleConfirm }
+                        />
+                        </div>
             </React.Fragment>)
     }
 }
