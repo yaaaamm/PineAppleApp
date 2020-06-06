@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { getPersons } from '../../../../action/person/persons';
+import moment from "moment";
 
 
 export class PersonsList extends Component {
@@ -24,7 +25,7 @@ export class PersonsList extends Component {
                     <tr >
                         <th scope="col">ID</th>
                         <th scope="col">ФИО</th>
-                        <th scope="col">Дата</th>
+                        <th scope="col">Дата добавления</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -32,7 +33,7 @@ export class PersonsList extends Component {
                         <tr key={person.id}>
                                 <td> { person.id } </td>
                                 <td><a href ={"person/" + person.id}> { person.first_name } { person.last_name } { person.middle_name }</a></td>
-                                <td> { person.createdAt }</td>
+                                <td> { moment(person.createdAt).format('Do MMMM YYYY, h:mm:ss a') }</td>
                                 <td></td>
                             </tr>
                         )) }

@@ -26,6 +26,9 @@ def person(request, id):
             serializer.save()
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    elif request.method == 'DELETE':
+        person.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
 
 @api_view(['GET'])
@@ -62,6 +65,7 @@ def person_detail_create(request, id):
         source = body['data']['source']
         data = body['data']['person_detail']
         data['person'] = id
+        print(source)
         if source == "person_previous_last_names":
             serializer = PersonРreviousLastNameSerializer(data=data)
         elif source == "person_addresses":

@@ -38,3 +38,11 @@ export const updatePerson = (data) => dispatch => {
         dispatch(push(`/person/${response.data.id}`))
         ).catch(err=>console.log(err))
     };
+
+
+export const deletePerson = (id) => dispatch => {
+        const url = `${API_URL}/person/${id}`;
+        return axios.delete(url).then(response =>
+        dispatch(push(`/person_list`))
+        ).catch(err=>console.log(err))
+    };

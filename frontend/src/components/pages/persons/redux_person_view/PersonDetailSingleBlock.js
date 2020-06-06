@@ -14,7 +14,7 @@ import PropTypes from "prop-types";
 class PersonDetailSingleBlock extends Component {
 
     static propTypes = {
-        person: PropTypes.object.isRequired,
+        person: PropTypes.any,
         person_show_modal: PropTypes.object.isRequired,
         getPersonDetails: PropTypes.func.isRequired,
         personDeleteDetail: PropTypes.func.isRequired,

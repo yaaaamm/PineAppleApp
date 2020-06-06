@@ -2,10 +2,9 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import classnames from 'classnames'
 import PropTypes from "prop-types";
-import {addPerson, updatePerson } from "../../../../action/person/persons";
+import {addPerson, deletePerson, updatePerson} from "../../../../action/person/persons";
 import {getPersonDetails} from "../../../../action/person/person_detail";
-import PersonConfirmActions from "../redux_person_view/PersonConfirmActions";
-import {Button, Confirm} from "semantic-ui-react";
+import {Modal}  from "react-bootstrap";
 
 
 class PersonAddUpdate extends Component {
@@ -14,6 +13,7 @@ class PersonAddUpdate extends Component {
         getPersonDetails: PropTypes.func.isRequired,
         addPerson: PropTypes.func.isRequired,
         updatePerson: PropTypes.func.isRequired,
+        deletePerson: PropTypes.func.isRequired,
     };
 
     state={
@@ -76,12 +76,14 @@ class PersonAddUpdate extends Component {
         }
     };
 
-    deleteClick = (e) => {
+    deleteConfirm = (e) => {
         e.preventDefault();
-        this.setState({ open: true })
+        this.setState({ open: true });
     };
-    handleConfirm = () => this.setState({  open: false })
-    handleCancel = () => this.setState({  open: false })
+    handleConfirmedDelete = () => {
+        this.props.deletePerson(this.state.id);
+    };
+    handleCancel = () => this.setState({  open: false });
 
     render() {
         return (
@@ -158,18 +160,26 @@ class PersonAddUpdate extends Component {
                         />
                     </div>
                     <div className="text-right">
-                        <button className="btn btn btn-danger float-left" onClick ={ this.deleteClick }>Удалить</button>
+                        <button className="btn btn btn-danger float-left" onClick ={ this.deleteConfirm }>Удалить</button>
                         <button className="btn btn-primary"  onClick={ this.handleClick }>Сохранить</button>
                     </div>
 
                 </form>
-                 <div className="container">
-                        <Confirm
-                            open={ this.state.open }
-                            onCancel={ this.handleCancel }
-                            onConfirm={ this.handleConfirm }
-                        />
+                <Modal
+                    show={ this.state.open }
+                    onHide={ this.handleCancel }
+                    size="lg"
+                >
+                    <Modal.Body>
+                        <div className="modal-body">
+                            Вы уверены, что хотите удалить все данные по этому объекту?
                         </div>
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <button className="btn btn-primary" onClick={ this.handleCancel }>Закрыть</button>
+                        <button className="btn btn-danger" onClick={ this.handleConfirmedDelete }>Удалить</button>
+                    </Modal.Footer>
+                </Modal>
             </React.Fragment>)
     }
 }
@@ -187,4 +197,4 @@ function mapStateToProps (state, props) {
 
 
 
-export default connect(mapStateToProps, { getPersonDetails,addPerson, updatePerson})(PersonAddUpdate);
+export default connect(mapStateToProps, { getPersonDetails,addPerson, updatePerson, deletePerson})(PersonAddUpdate);
