@@ -30,10 +30,6 @@ class PersonDetailActionButtons extends Component {
                             onClick={() =>this.props.personOpenEditDetail(this.props.data, this.props.keyName) }
                     >
                         <i className="fas fa-edit"></i></button>
-                    <button className="btn btn-outline-info btn-sm"
-                        style={ this.getStyleOnEdit(!this.props.data.is_edit_mode) }
-                    >
-                        <i className="fas fa-check"></i></button>
                     <button className="btn btn-danger btn-sm"
                     onClick={() =>this.props.personDeleteDetail(this.props.data.id, this.props.keyName) }
                     >

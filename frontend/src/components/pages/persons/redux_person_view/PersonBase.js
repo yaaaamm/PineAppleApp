@@ -7,17 +7,19 @@ import PersonDetailSingleBlock from "./PersonDetailSingleBlock";
 import  { Link } from 'react-router-dom'
 import PersonMainData from "./PersonMainData";
 import TabsWrappedLabel from "./PersonDetailTabs";
+import PersonDetailBusiness from "./PersonDetailBusinessIP";
 
 
 const  personsService  =  new PersonsService();
 
 class PersonBase extends Component {
 
-    static propTypes={
+    /*static propTypes={
         person_details: PropTypes.object.isRequired,
         getPersonDetails: PropTypes.func.isRequired,
         personDeleteDetail: PropTypes.func.isRequired,
-    };
+    };*/
+
 
 
     componentDidMount() {
@@ -96,26 +98,28 @@ class PersonBase extends Component {
 
 
     render() {
-        return (
-            <div className="container">
-                <PersonMainData data={ this.props.person_details.person }/>
-                { Object.entries(this.props.person_details).map(([key, value]) => {
-                    if (key !== 'person' && key !=='person_social_relations' && key !=='person_social_relations_group' ) {
-                        return (
-                            <PersonDetailSingleBlock key={ key } keyName={ key } data={ value }/>)
-                    } else if (key ==='person_social_relations' || key ==='person_social_relations_group') {
-                        return (
-                           <>
-                           <div className="card mx-auto my-2 my-sm-3 my-lg-4 p-3">
-                            <TabsWrappedLabel key={ key } keyName={ key } data={ value }/>
-                            </div>
-                           </>
-                            )
+        if ( this.props.person_details.person ) {
+            return (
+                <div className="container">
+                    <PersonMainData key={ 'person' } data={ this.props.person_details.person }/>
+                    { Object.entries(this.props.person_details).map(( [ key, value ] ) => {
+                        if ( key !== 'person' && key !== 'person_social_relations' && key !== 'person_social_relations_group' && key !== 'person_ip' ) {
+                            return (
+                                <PersonDetailSingleBlock key={ key } keyName={ key } data={ value }/>)
+                        } else if ( key === 'person_social_relations' || key === 'person_social_relations_group' ) {
+                            return (
+
+                                    <div className="card mx-auto my-2 my-sm-3 my-lg-4 p-3">
+                                        <TabsWrappedLabel key={ key } keyName={ key } data={ value }/>
+                                    </div>
+                                )
                         }
 
-                    return null
-                }) }
-            </div>);
+                    }) }
+                    <PersonDetailBusiness/>
+                </div>);
+        }
+        return (<div></div>)
     }
 }
 

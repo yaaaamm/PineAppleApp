@@ -140,6 +140,8 @@ def person_detail(request, id):
     person_social_relations_group_inst = PersonSocialRelationsGroupInst.objects.filter(person=person_data.id)
     person_social_relations_group_cm = PersonSocialRelationsGroupCM.objects.filter(person=person_data.id)
     person_ip = PersonIP.objects.filter(person=person_data.id)
+    ip_detail = IPDetail.objects.filter(ip=3)
+    print(ip_detail)
 
     if request.method == 'GET':
         person_serializer = PersonSerializer(person_data, context={'request': request})
@@ -183,10 +185,12 @@ def person_detail(request, id):
             person_social_relations_group_cm,
             context={'request': request},
             many=True)
-        person_ip_serializer = PersonIPSerializer(
-            person_ip,
-            context={'request': request},
+        person_ip_serializer = PersonIPSerializer(instance=person_ip, context={'request': request},
             many=True)
+        '''ip_detail_serializer = IPDetailSerializer(
+            ip_detail,
+            context={'request': request},
+            many=True)'''
 
         return Response(
             {

@@ -2,7 +2,8 @@ from rest_framework import serializers
 from .models import Person, РreviousLastName, PersonAddress, PersonEducation, PersonSocialNet, PersonFamilyTies, \
     PersonSocialRelationsVK, PersonSocialRelationsFB, PersonSocialRelationsInst, \
     PersonSocialRelationsCM, PersonSocialRelationsGroupVK, PersonSocialRelationsGroupFB, PersonSocialRelationsGroupInst, \
-    PersonSocialRelationsGroupCM, PersonWork, PersonFellowTraveler, PersonIP
+    PersonSocialRelationsGroupCM, PersonWork, PersonFellowTraveler, PersonIP, PersonWorkWOC, PersonCompaniesCEOWOC, \
+    PersonCompaniesFounderWOC, CompaniesCEOFounders, CompaniesFounderPartners, IPDetail
 
 
 class PersonSerializer(serializers.ModelSerializer):
@@ -93,28 +94,28 @@ class PersonSocialRelationsGroupVKSerializer(serializers.ModelSerializer):
     class Meta:
         model = PersonSocialRelationsGroupVK
         fields = (
-            'social_relations_vk_link_group', 'social_relations_vk_link_group', 'id', 'person')
+            'social_relations_vk_link_group', 'social_relations_vk_name_group', 'id', 'person')
 
 
 class PersonSocialRelationsGroupFBSerializer(serializers.ModelSerializer):
     class Meta:
         model = PersonSocialRelationsGroupFB
         fields = (
-            'social_relations_fb_link_group', 'social_relations_fb_link_group', 'id', 'person')
+            'social_relations_fb_link_group', 'social_relations_fb_name_group', 'id', 'person')
 
 
 class PersonSocialRelationsGroupInstSerializer(serializers.ModelSerializer):
     class Meta:
         model = PersonSocialRelationsGroupInst
         fields = (
-            'social_relations_inst_link_group', 'social_relations_inst_link_group', 'id', 'person')
+            'social_relations_inst_link_group', 'social_relations_inst_name_group', 'id', 'person')
 
 
 class PersonSocialRelationsGroupCMSerializer(serializers.ModelSerializer):
     class Meta:
         model = PersonSocialRelationsGroupCM
         fields = (
-            'social_relations_fb_link_group', 'social_relations_cm_link_group', 'id', 'person')
+            'social_relations_fb_link_group', 'social_relations_cm_name_group', 'id', 'person')
 
 
 class PersonWorkSerializer(serializers.ModelSerializer):
@@ -126,10 +127,64 @@ class PersonWorkSerializer(serializers.ModelSerializer):
             'work_date_period_to', 'id', 'person')
 
 
+class IPDetailSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = IPDetail
+        fields = (
+            'ip_detail_okved', 'id', 'ip')
+
+
 class PersonIPSerializer(serializers.ModelSerializer):
+    '''ip_detail = serializers.PrimaryKeyRelatedField(many=True, read_only=True)'''
+    ip_detail = IPDetailSerializer(many=True)
+
     class Meta:
         model = PersonIP
         fields = (
             'ip_name', 'ip_inn', 'ip_is_active',
             'ip_date_period_from',
-            'ip_date_period_to', 'id', 'person')
+            'ip_date_period_to', 'ip_detail', 'id', 'person')
+
+
+
+
+class PersonWorkWOCSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PersonWorkWOC
+        fields = (
+            'company_name', 'company_inn', 'work_position',
+            'work_date_period_from',
+            'work_date_period_to', 'id', 'person')
+
+
+class PersonCompaniesCEOWOCSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PersonCompaniesCEOWOC
+        fields = (
+            'company_name', 'company_inn', 'companies_ceo_date_period_from',
+            'companies_ceo_date_period_to',
+            'company_date_period_from', 'company_date_period_to', 'id', 'person')
+
+
+class PersonCompaniesFounderWOCSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PersonCompaniesFounderWOC
+        fields = (
+            'company_name', 'company_inn', 'company_share',
+            'company_date_period_from', 'company_date_period_to', 'id', 'person')
+
+
+class CompaniesCEOFoundersSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CompaniesCEOFounders
+        fields = (
+            'first_name', 'last_name', 'middle_name',
+            'inn', 'company_date_period_from', 'company_date_period_to', 'id', 'company')
+
+
+class CompaniesFounderPartnersSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CompaniesFounderPartners
+        fields = (
+            'first_name', 'last_name', 'middle_name',
+            'inn', 'company_share', 'id', 'company')

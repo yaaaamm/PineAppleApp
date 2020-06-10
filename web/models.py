@@ -163,7 +163,7 @@ class PersonIP(models.Model):
 
 
 class IPDetail(models.Model):
-    ip = models.ForeignKey(PersonIP, on_delete=models.CASCADE)
+    ip = models.ForeignKey(PersonIP, related_name='ip_detail', on_delete=models.CASCADE)
     createdAt = models.DateTimeField("Created At", auto_now_add=True)
     ip_detail_okved = models.CharField("Основной ОКВЕД", max_length=50, blank=True, null=True)
 
@@ -203,7 +203,6 @@ class PersonCompaniesFounder(models.Model):
     companies_founder_date_period_to = models.DateField("являлся учредителем по", null=True, blank=True)
 
 
-
 class PersonWorkWOC(models.Model):
     person = models.ForeignKey(Person, on_delete=models.CASCADE)
     createdAt = models.DateTimeField("Created At", auto_now_add=True)
@@ -236,7 +235,7 @@ class PersonCompaniesFounderWOC(models.Model):
 
 
 class CompaniesCEOFounders(models.Model):
-    person_companies_CEO = models.ForeignKey(PersonCompaniesCEOWOC, on_delete=models.CASCADE, blank=True, null=True)
+    company = models.ForeignKey(PersonCompaniesCEOWOC, on_delete=models.CASCADE, blank=True, null=True)
     createdAt = models.DateTimeField("Created At", auto_now_add=True)
     first_name = models.CharField("Имя", max_length=30)
     last_name = models.CharField("Фамилия", max_length=30)
@@ -245,7 +244,7 @@ class CompaniesCEOFounders(models.Model):
 
 
 class CompaniesFounderPartners(models.Model):
-    person_companies_founder = models.ForeignKey(PersonCompaniesFounderWOC, on_delete=models.CASCADE, blank=True, null=True)
+    company = models.ForeignKey(PersonCompaniesFounderWOC, on_delete=models.CASCADE, blank=True, null=True)
     createdAt = models.DateTimeField("Created At", auto_now_add=True)
     first_name = models.CharField("Имя", max_length=30)
     last_name = models.CharField("Фамилия", max_length=30)

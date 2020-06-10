@@ -8,10 +8,14 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import PersonDetailSingleBlock from "./PersonDetailSingleBlock";
 import {tab_titles} from "./PersonDetailConstTableTitles";
+import {connect} from "react-redux";
+import {getPersonDetails, personDeleteDetail} from "../../../../action/person/person_detail";
+import {
+  personCloseEditDetail, personOpenAddDetail, personOpenEditDetail
+} from "../../../../action/person/person_detail_edit";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
-  console.log(props)
   return (
     <div
       role="tabpanel"
@@ -22,7 +26,7 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box p={3}>
-          <Typography>{children}</Typography>
+          <Typography component={'div'}>{children}</Typography>
         </Box>
       )}
     </div>
@@ -50,7 +54,14 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function TabsWrappedLabel(props) {
+const mapStateToProps = state => ({
+    person_details: state.person_details.person_details,
+
+});
+
+
+
+export default connect(mapStateToProps)(function TabsWrappedLabel(props) {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -78,4 +89,4 @@ export default function TabsWrappedLabel(props) {
       }
     </div>
   );
-}
+})

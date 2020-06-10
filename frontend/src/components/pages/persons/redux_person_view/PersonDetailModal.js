@@ -36,13 +36,13 @@ class PersonDetailModal extends Component {
     };
 
     handleClick = () => {
-        let isValid=false
+        let isValid=false;
         const {personUpdateDetail, personSaveAddDetail, personCloseEditDetail}=this.props;
         if (this.state.person_detail.id) {
             personUpdateDetail(this.state.person_detail, this.props.person_show_modal.title_for);
         } else {
             let newArr=Object.values(this.state.person_detail).filter(value => {
-                return value !== ""
+                return value !== null
             });
             newArr.length === 0 ? isValid=false : isValid=true;
             if (isValid) {
@@ -59,7 +59,7 @@ class PersonDetailModal extends Component {
 
     render() {
         const title=getPersonDetailTableTitle(this.props.person_show_modal.title_for);
-        let type ="text"
+        let type ="text";
         return (
             <React.Fragment>
                 <Modal

@@ -11,6 +11,23 @@ const API_URL = 'http://localhost:8000';
 
 
 //
+/*
+export const getPersonDetails = (id) => dispatch => {
+        const url = `${API_URL}/person_detail/${id}`;
+        return fetch(url)
+            .then((response) => response.json())
+            .then((response) => {
+                console.log(response)
+                dispatch({
+                        type: GET_PERSON_DETAILS,
+                        payload: response
+            });
+            })
+            .then((error) => {
+                console.log(error)
+            })
+    };
+*/
 export const getPersonDetails = (id) => dispatch => {
         const url = `${API_URL}/person_detail/${id}`;
         return axios.get(url).then(response =>
@@ -19,6 +36,7 @@ export const getPersonDetails = (id) => dispatch => {
                 type: GET_PERSON_DETAILS,
                 payload: response.data
             });
+            console.log(response.data)
         }).catch(err=>console.log(err))
     };
 
