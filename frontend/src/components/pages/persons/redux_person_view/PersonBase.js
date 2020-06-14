@@ -7,18 +7,21 @@ import PersonDetailSingleBlock from "./PersonDetailSingleBlock";
 import  { Link } from 'react-router-dom'
 import PersonMainData from "./PersonMainData";
 import TabsWrappedLabel from "./PersonDetailTabs";
-import PersonDetailBusiness from "./PersonDetailBusinessIP";
+import PersonDetailBusinessIP from "./PersonDetailBusinessIP";
+import PersonDetailModal from "./PersonDetailModal";
+import PersonDetailBusinessModal from "./PersonDetailBusinessIPModal";
+import PersonDetailBusinessCompanyCEO from "./PersonDetailBusinessCompanyCEO";
 
 
 const  personsService  =  new PersonsService();
 
 class PersonBase extends Component {
 
-    /*static propTypes={
+    static propTypes={
         person_details: PropTypes.object.isRequired,
         getPersonDetails: PropTypes.func.isRequired,
         personDeleteDetail: PropTypes.func.isRequired,
-    };*/
+    };
 
 
 
@@ -96,6 +99,25 @@ class PersonBase extends Component {
         })
     }
 
+    showModal=(display) => {
+            if (display) {
+                return (
+                    <PersonDetailModal />)
+            } else {
+                return (
+                    <div></div>)
+            }
+        };
+    showModalBusiness=(display) => {
+        if (display) {
+                return (
+                    <PersonDetailBusinessModal />)
+            } else {
+                return (
+                    <div></div>)
+            }
+        };
+
 
     render() {
         if ( this.props.person_details.person ) {
@@ -103,20 +125,28 @@ class PersonBase extends Component {
                 <div className="container">
                     <PersonMainData key={ 'person' } data={ this.props.person_details.person }/>
                     { Object.entries(this.props.person_details).map(( [ key, value ] ) => {
-                        if ( key !== 'person' && key !== 'person_social_relations' && key !== 'person_social_relations_group' && key !== 'person_ip' ) {
-                            return (
-                                <PersonDetailSingleBlock key={ key } keyName={ key } data={ value }/>)
-                        } else if ( key === 'person_social_relations' || key === 'person_social_relations_group' ) {
+                        if ( key === 'person_social_relations' || key === 'person_social_relations_group' ) {
                             return (
 
-                                    <div className="card mx-auto my-2 my-sm-3 my-lg-4 p-3">
+                                    <div key={ key } className="card mx-auto my-2 my-sm-3 my-lg-4 p-3">
                                         <TabsWrappedLabel key={ key } keyName={ key } data={ value }/>
                                     </div>
                                 )
+                        }else if ( key === 'person_ip')  {
+                            return (
+                                <PersonDetailBusinessIP key={ key } keyName={ key }/>
+                            )
+                        }else if ( key === 'person_companies_CEO')  {
+                            return (
+                                <PersonDetailBusinessCompanyCEO key={ key } keyName={ key }/>
+                            )
+                        }else if( key !== 'person') {
+                            return (
+                                <PersonDetailSingleBlock key={ key } keyName={ key } data={ value }/>)
                         }
-
                     }) }
-                    <PersonDetailBusiness/>
+                    { this.showModal(this.props.person_show_modal.display) }
+                    { this.showModalBusiness(this.props.person_show_modal_business.display) }
                 </div>);
         }
         return (<div></div>)
@@ -127,6 +157,8 @@ class PersonBase extends Component {
 
 const mapStateToProps = state => ({
     person_details: state.person_details.person_details,
+    person_show_modal: state.person_detail_edit.person_show_modal,
+    person_show_modal_business: state.person_detail_edit.person_show_modal_business
 });
 
 

@@ -94,8 +94,22 @@ def person_detail_create(request, id):
             serializer = PersonSocialRelationsGroupInstSerializer(data=data)
         elif source == "person_social_relations_group_cm":
             serializer = PersonSocialRelationsGroupCMSerializer(data=data)
+        elif source == "person_work":
+            serializer = PersonWorkWOCSerializer(data=data)
         elif source == "person_ip":
             serializer = PersonIPSerializer(data=data)
+        elif source == "person_ip_business_detail":
+            ip = body['data']['business_id']
+            data['ip'] = ip
+            serializer = IPDetailSerializer(data=data)
+        elif source == "person_companies_CEO":
+            serializer = PersonCompaniesCEOWOCSerializer(data=data)
+        elif source == "person_companies_CEO_business_detail":
+            data['company'] = body['data']['business_id']
+            serializer = CompaniesCEOFoundersSerializer(data=data)
+        serializer.is_valid()
+        print(serializer.errors)
+        print(data)
         if serializer and serializer.is_valid():
             if serializer.is_valid():
                 serializer.save()
@@ -140,8 +154,9 @@ def person_detail(request, id):
     person_social_relations_group_inst = PersonSocialRelationsGroupInst.objects.filter(person=person_data.id)
     person_social_relations_group_cm = PersonSocialRelationsGroupCM.objects.filter(person=person_data.id)
     person_ip = PersonIP.objects.filter(person=person_data.id)
-    ip_detail = IPDetail.objects.filter(ip=3)
-    print(ip_detail)
+    person_work = PersonWorkWOC.objects.filter(person=person_data.id)
+    person_companies_CEO = PersonCompaniesCEOWOC.objects.filter(person=person_data.id)
+    person_companies_founder = PersonCompaniesFounderWOC.objects.filter(person=person_data.id)
 
     if request.method == 'GET':
         person_serializer = PersonSerializer(person_data, context={'request': request})
@@ -187,11 +202,13 @@ def person_detail(request, id):
             many=True)
         person_ip_serializer = PersonIPSerializer(instance=person_ip, context={'request': request},
             many=True)
-        '''ip_detail_serializer = IPDetailSerializer(
-            ip_detail,
-            context={'request': request},
-            many=True)'''
-
+        person_work_serializer = PersonWorkWOCSerializer(instance=person_work, context={'request': request},
+            many=True)
+        person_companies_CEO_serializer = PersonCompaniesCEOWOCSerializer(instance=person_companies_CEO, context={'request': request},
+            many=True)
+        person_companies_founder_serializer = PersonCompaniesFounderWOCSerializer(instance=person_companies_founder,
+                                                                          context={'request': request},
+                                                                          many=True)
         return Response(
             {
                 'person': person_serializer.data,
@@ -201,7 +218,10 @@ def person_detail(request, id):
                 'person_social_net': person_social_net_serializer.data,
                 'person_family_ties': person_family_ties_serializer.data,
                 'person_fellow_traveler': person_fellow_traveler_serializer.data,
+                'person_work': person_work_serializer.data,
                 'person_ip': person_ip_serializer.data,
+                'person_companies_CEO': person_companies_CEO_serializer.data,
+                'person_companies_founder':  person_companies_founder_serializer.data,
                 'person_social_relations': {
                     'person_social_relations_vk': person_social_relations_vk_serializer.data,
                     'person_social_relations_fb': person_social_relations_fb_serializer.data,
@@ -278,6 +298,26 @@ def person_detail_update(request):
             person_ip = PersonIP.objects.get(id=data['id'])
             serializer = PersonIPSerializer(person_ip, data=data,
                                             context={'request': request})
+        elif source == "person_ip_business_detail":
+            ip_detail = IPDetail.objects.get(id=data['id'])
+            serializer = IPDetailSerializer(ip_detail, data=data,
+                                            context={'request': request})
+        elif source == "person_work":
+            person_work = PersonWorkWOC.objects.get(id=data['id'])
+            serializer = PersonIPSerializer(person_work, data=data,
+                                            context={'request': request})
+        elif source == "person_companies_CEO":
+            person_companies_CEO = PersonCompaniesCEOWOC.objects.get(id=data['id'])
+            serializer = PersonCompaniesCEOWOCSerializer(person_companies_CEO, data=data,
+                                            context={'request': request})
+
+
+        elif source == "person_companies_CEO_business_detail":
+            business_detail = CompaniesCEOFounders.objects.get(id=data['id'])
+            serializer = CompaniesCEOFoundersSerializer(business_detail, data=data,
+                                            context={'request': request})
+
+
         if serializer and serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
@@ -288,6 +328,7 @@ def person_detail_update(request):
 def person_detail_delete(request):
     if request.method == 'DELETE':
         body = json.loads(request.body)
+        print(body)
         source = body['source']
         id = body['id']
         if source == "person_previous_last_names":
@@ -320,8 +361,17 @@ def person_detail_delete(request):
             person_details = PersonSocialRelationsGroupCM.objects.get(id=id)
         elif source == "person_ip":
             person_details = PersonIP.objects.get(id=id)
+        elif source == "person_ip_business_detail":
+            person_details = IPDetail.objects.get(id=id)
+        elif source == "person_work":
+            person_details = PersonWorkWOC.objects.get(id=id)
+        elif source == "person_companies_CEO":
+            person_details = PersonCompaniesCEOWOC.objects.get(id=id)
+        elif source == "person_companies_CEO_business_detail":
+            person_details = CompaniesCEOFounders.objects.get(id=id)
         else:
             return Response(status=status.HTTP_400_BAD_REQUEST)
+        print(person_details)
         person_details.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 

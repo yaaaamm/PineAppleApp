@@ -2,20 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49d5d8b4-0721-49fd-8cfd-9f32a69d2817" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessIP.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessIPTableHeadBody.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/migrations/0025_auto_20200606_1422.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/migrations/0026_auto_20200606_1423.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0891c826-b7b2-4a02-a7a6-faa28d6f8a47.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0891c826-b7b2-4a02-a7a6-faa28d6f8a47.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Yam.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessCompanyCEO.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessCompanyTableBody.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessIPModal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/migrations/0027_auto_20200612_1219.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/migrations/0028_auto_20200614_1116.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/migrations/0029_auto_20200614_1910.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/action/person/person_detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/action/person/person_detail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/action/person/person_detail_edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/action/person/person_detail_edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/action/person/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/action/person/types.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonBase.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonBase.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailActionButtons.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailActionButtons.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessIP.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessIP.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessIPTableHeadBody.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessIPTableBody.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailConstTableTitles.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailConstTableTitles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailSingleBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailSingleBlock.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailTabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailTabs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailViewTableBody.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailViewTableBody.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redusers/person_detail_edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redusers/person_detail_edit.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/redusers/person_details.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redusers/person_details.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/serializers.py" afterDir="false" />
@@ -96,7 +105,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../React/todo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -110,11 +119,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\pycharm\Projects\DjangoProjects\pineappleApp\frontend\src\components\pages\persons\redux_person_view" />
       <recent name="D:\pycharm\Projects\DjangoProjects\pineappleApp\web" />
       <recent name="D:\pycharm\Projects\DjangoProjects\pineappleApp\frontend\src\components\pages\persons\redux_person_add" />
       <recent name="D:\pycharm\Projects\DjangoProjects\pineappleApp\frontend\src\action\company" />
       <recent name="D:\pycharm\Projects\DjangoProjects\pineappleApp\frontend\src\components\pages\companies\redux_company_add_view" />
-      <recent name="D:\pycharm\Projects\DjangoProjects\pineappleApp\frontend\src\components\pages\persons\redux_person_view" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\pycharm\Projects\DjangoProjects\pineappleApp\frontend\src\action\person" />
@@ -192,7 +201,9 @@
       <workItem from="1591364975218" duration="1233000" />
       <workItem from="1591433540852" duration="10556000" />
       <workItem from="1591602672906" duration="45270000" />
-      <workItem from="1591767659306" duration="9384000" />
+      <workItem from="1591767659306" duration="26110000" />
+      <workItem from="1592041794417" duration="23860000" />
+      <workItem from="1592126958078" duration="9240000" />
     </task>
     <servers />
   </component>
@@ -233,10 +244,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587714440764" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1591704135341">
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1592111601052">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1591704135341" />
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1592111601052" />
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1591002308950" />
     <state width="1876" height="277" key="GridCell.Tab.0.bottom" timestamp="1587731010522">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -275,5 +286,19 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1591790335045" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessIPModal.js</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailTabs.js</url>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -9,10 +9,6 @@ import Box from '@material-ui/core/Box';
 import PersonDetailSingleBlock from "./PersonDetailSingleBlock";
 import {tab_titles} from "./PersonDetailConstTableTitles";
 import {connect} from "react-redux";
-import {getPersonDetails, personDeleteDetail} from "../../../../action/person/person_detail";
-import {
-  personCloseEditDetail, personOpenAddDetail, personOpenEditDetail
-} from "../../../../action/person/person_detail_edit";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -73,7 +69,7 @@ export default connect(mapStateToProps)(function TabsWrappedLabel(props) {
       <AppBar position="static">
         <Tabs value={value} onChange={handleChange} aria-label="simple tabs" variant="fullWidth">
           {Object.entries(props.data).map(([key, value], index) => {
-            return (<Tab label={tab_titles[key]} {...a11yProps({index})} />)
+            return (<Tab key={key} label={tab_titles[key]} {...a11yProps({index})} />)
           })
           }
         </Tabs>

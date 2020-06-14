@@ -14,7 +14,9 @@ export const main_titles ={
     person_social_relations_group_inst: 'Группы Инст в которых состоит человек',
     person_social_relations_group_cm: 'Группы Одноклассники в которых состоит человек',
     person_ip: 'Данные об ИП',
-
+    person_work: 'Данные о работе',
+    person_companies_CEO: 'Где являлся Генеральным директором',
+    person_companies_founder: 'Где являлся учредитем'
 };
 
 export const tab_titles ={
@@ -121,6 +123,40 @@ const person_ip ={
     ip_date_period_to: 'Период работы по',
 };
 
+const person_work ={
+    company_name: 'Название компании',
+    company_inn: 'ИНН',
+    work_position: 'Должность',
+    work_date_period_from: 'Период работы с',
+    work_date_period_to: 'Период работы по',
+};
+
+const person_companies_CEO ={
+    company_name: 'Название компании',
+    company_inn: 'ИНН',
+    companies_ceo_date_period_from: 'Ген. дир с',
+    companies_ceo_date_period_to: 'Ген. дир по',
+    company_date_period_from: 'Период работы компании с',
+    company_date_period_to: 'Период работы компании по',
+};
+
+const person_companies_founder ={
+    company_name: 'Название компании',
+    company_inn: 'ИНН',
+    company_share: 'Доля в компании',
+    company_date_period_from: 'Период работы компании с',
+    company_date_period_to: 'Период работы компании по',
+};
+
+const person_ip_business_detail = {
+    ip_detail_okved: 'Основной ОКВЭД',
+};
+const person_companies_CEO_business_detail = {
+    first_name: 'Имя',
+    last_name: 'Фамилия',
+    middle_name: 'Отчество',
+    inn: 'ИНН',
+};
 
 export default function getPersonDetailTableTitle(title) {
     switch(title){
@@ -154,6 +190,16 @@ export default function getPersonDetailTableTitle(title) {
             return person_social_relations_group_cm;
         case "person_ip":
             return person_ip;
+        case "person_ip_business_detail":
+            return person_ip_business_detail;
+        case "person_work":
+            return person_work;
+        case "person_companies_CEO":
+            return person_companies_CEO;
+        case "person_companies_founder":
+            return person_companies_founder;
+        case "person_companies_CEO_business_detail":
+            return person_companies_CEO_business_detail;
         default:
             return title;
     }

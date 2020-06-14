@@ -15,7 +15,6 @@ class PersonDetailSingleBlock extends Component {
 
     static propTypes = {
         person: PropTypes.any,
-        person_show_modal: PropTypes.object.isRequired,
         getPersonDetails: PropTypes.func.isRequired,
         personDeleteDetail: PropTypes.func.isRequired,
         personCloseEditDetail: PropTypes.func.isRequired,
@@ -23,16 +22,6 @@ class PersonDetailSingleBlock extends Component {
         personOpenEditDetail: PropTypes.func.isRequired,
 };
 
-
-    showModal=(display) => {
-        if (display) {
-            return (
-                <PersonDetailModal />)
-        } else {
-            return (
-                <div></div>)
-        }
-    };
 
     render() {
         return (
@@ -50,22 +39,20 @@ class PersonDetailSingleBlock extends Component {
                         { this.props.data.map((item, index) => <tr key={ item.id }>
                             <th scope="row"> { index + 1 }</th>
                             <PersonDetailViewTableBody key={ item.id } data={ item }/>
-                            <PersonDetailActionButtons data={ item } keyName={ this.props.keyName }/>
+                            <PersonDetailActionButtons data={ item } keyName={ this.props.keyName } rowSpan="1"/>
                         </tr>) }
                         </tbody>
                     </table>
                 </div>
                 <div className="text-right">
-                    <button className="btn btn btn-primary btn-sm" onClick={() =>this.props.personOpenAddDetail(this.props.keyName)}>Добавить</button>
+                    <button className="btn btn btn-primary btn-sm" onClick={() =>this.props.personOpenAddDetail(this.props.keyName, this.props.business_id)}>Добавить</button>
                 </div>
-             { this.showModal(this.props.person_show_modal.display) }
             </div>);
     }
 }
 
 const mapStateToProps = state => ({
-    person_details: state.person_details.person_details,
-    person_show_modal: state.person_detail_edit.person_show_modal
+    person_details: state.person_details.person_details
 
 
 });

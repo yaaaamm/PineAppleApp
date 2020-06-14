@@ -163,44 +163,9 @@ class PersonIP(models.Model):
 
 
 class IPDetail(models.Model):
-    ip = models.ForeignKey(PersonIP, related_name='ip_detail', on_delete=models.CASCADE)
+    ip = models.ForeignKey(PersonIP, related_name='business_detail', on_delete=models.CASCADE)
     createdAt = models.DateTimeField("Created At", auto_now_add=True)
     ip_detail_okved = models.CharField("Основной ОКВЕД", max_length=50, blank=True, null=True)
-
-
-class Company(models.Model):
-    company_name = models.CharField("Название компании", max_length=50, blank=True, null=True)
-    company_inn = models.CharField("ИНН компании", max_length=30, blank=True, null=True)
-    company_is_active = models.BooleanField("Действует?", blank=True, null=True)
-    company_date_period_from = models.DateField("Период работы с", null=True, blank=True)
-    company_date_period_to = models.DateField("Период работы по", null=True, blank=True)
-
-
-class PersonWork(models.Model):
-    person = models.ForeignKey(Person, on_delete=models.CASCADE)
-    createdAt = models.DateTimeField("Created At", auto_now_add=True)
-    company = models.ManyToManyField(Company)
-    work_position = models.CharField("Должность", max_length=30, blank=True, null=True)
-    work_date_period_from = models.DateField("Период работы с", null=True, blank=True)
-    work_date_period_to = models.DateField("Период работы по", null=True, blank=True)
-
-
-class PersonCompaniesCEO(models.Model):
-    person = models.ForeignKey(Person, on_delete=models.SET_NULL, blank=True, null=True)
-    createdAt = models.DateTimeField("Created At", auto_now_add=True)
-    company = models.ManyToManyField(Company)
-    companies_ceo = models.CharField("Сейчас является ген.дир?", max_length=30, blank=True, null=True)
-    companies_ceo_date_period_from = models.DateField("Ген. дир с", null=True, blank=True)
-    companies_ceo_date_period_to = models.DateField("Ген. дир по", null=True, blank=True)
-
-
-class PersonCompaniesFounder(models.Model):
-    person = models.ForeignKey(Person, on_delete=models.SET_NULL, blank=True, null=True)
-    createdAt = models.DateTimeField("Created At", auto_now_add=True)
-    company = models.ManyToManyField(Company)
-    companies_founder = models.CharField("Сейчас является учредителем?", max_length=30, blank=True, null=True)
-    companies_founder_date_period_from = models.DateField("являлся учредителем с", null=True, blank=True)
-    companies_founder_date_period_to = models.DateField("являлся учредителем по", null=True, blank=True)
 
 
 class PersonWorkWOC(models.Model):
@@ -235,19 +200,58 @@ class PersonCompaniesFounderWOC(models.Model):
 
 
 class CompaniesCEOFounders(models.Model):
-    company = models.ForeignKey(PersonCompaniesCEOWOC, on_delete=models.CASCADE, blank=True, null=True)
+    company = models.ForeignKey(PersonCompaniesCEOWOC, related_name='business_detail', on_delete=models.CASCADE, blank=True, null=True)
     createdAt = models.DateTimeField("Created At", auto_now_add=True)
-    first_name = models.CharField("Имя", max_length=30)
-    last_name = models.CharField("Фамилия", max_length=30)
+    first_name = models.CharField("Имя", max_length=30, blank=True, null=True)
+    last_name = models.CharField("Фамилия", max_length=30, blank=True, null=True)
     middle_name = models.CharField("Отчество", max_length=30, blank=True, null=True)
     inn = models.CharField("ИНН", max_length=30, blank=True, null=True)
 
 
 class CompaniesFounderPartners(models.Model):
-    company = models.ForeignKey(PersonCompaniesFounderWOC, on_delete=models.CASCADE, blank=True, null=True)
+    company = models.ForeignKey(PersonCompaniesFounderWOC, related_name='business_detail', on_delete=models.CASCADE, blank=True, null=True)
     createdAt = models.DateTimeField("Created At", auto_now_add=True)
-    first_name = models.CharField("Имя", max_length=30)
-    last_name = models.CharField("Фамилия", max_length=30)
+    first_name = models.CharField("Имя", max_length=30, blank=True, null=True)
+    last_name = models.CharField("Фамилия", max_length=30, blank=True, null=True)
     middle_name = models.CharField("Отчество", max_length=30, blank=True, null=True)
     inn = models.CharField("ИНН", max_length=30, blank=True, null=True)
     company_share = models.IntegerField("Доля в компании", null=True, blank=True)
+
+
+
+
+
+'''НЕ ИСПОЛЬЗУЕТСЯ'''
+class Company(models.Model):
+    company_name = models.CharField("Название компании", max_length=50, blank=True, null=True)
+    company_inn = models.CharField("ИНН компании", max_length=30, blank=True, null=True)
+    company_is_active = models.BooleanField("Действует?", blank=True, null=True)
+    company_date_period_from = models.DateField("Период работы с", null=True, blank=True)
+    company_date_period_to = models.DateField("Период работы по", null=True, blank=True)
+
+'''НЕ ИСПОЛЬЗУЕТСЯ'''
+class PersonWork(models.Model):
+    person = models.ForeignKey(Person, on_delete=models.CASCADE)
+    createdAt = models.DateTimeField("Created At", auto_now_add=True)
+    company = models.ManyToManyField(Company)
+    work_position = models.CharField("Должность", max_length=30, blank=True, null=True)
+    work_date_period_from = models.DateField("Период работы с", null=True, blank=True)
+    work_date_period_to = models.DateField("Период работы по", null=True, blank=True)
+
+'''НЕ ИСПОЛЬЗУЕТСЯ'''
+class PersonCompaniesCEO(models.Model):
+    person = models.ForeignKey(Person, on_delete=models.SET_NULL, blank=True, null=True)
+    createdAt = models.DateTimeField("Created At", auto_now_add=True)
+    company = models.ManyToManyField(Company)
+    companies_ceo = models.CharField("Сейчас является ген.дир?", max_length=30, blank=True, null=True)
+    companies_ceo_date_period_from = models.DateField("Ген. дир с", null=True, blank=True)
+    companies_ceo_date_period_to = models.DateField("Ген. дир по", null=True, blank=True)
+
+'''НЕ ИСПОЛЬЗУЕТСЯ'''
+class PersonCompaniesFounder(models.Model):
+    person = models.ForeignKey(Person, on_delete=models.SET_NULL, blank=True, null=True)
+    createdAt = models.DateTimeField("Created At", auto_now_add=True)
+    company = models.ManyToManyField(Company)
+    companies_founder = models.CharField("Сейчас является учредителем?", max_length=30, blank=True, null=True)
+    companies_founder_date_period_from = models.DateField("являлся учредителем с", null=True, blank=True)
+    companies_founder_date_period_to = models.DateField("являлся учредителем по", null=True, blank=True)

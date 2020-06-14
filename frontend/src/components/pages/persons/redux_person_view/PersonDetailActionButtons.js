@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {getPersonDetails, personDeleteDetail} from '../../../../action/person/person_detail';
+import {getPersonDetails, personDeleteDetail, personDeleteBusinessDetail} from '../../../../action/person/person_detail';
 import {personOpenEditDetail} from '../../../../action/person/person_detail_edit'
 import {connect} from "react-redux";
 import PropTypes from "prop-types";
@@ -24,7 +24,7 @@ class PersonDetailActionButtons extends Component {
     render() {
         return (
             <React.Fragment>
-                <td className="text-right">
+                <td rowSpan={this.props.rowSpan } className="text-right">
                     <button className="btn btn-outline-info btn-sm"
                             style={ this.getStyleOnEdit(this.props.data.is_edit_mode) }
                             onClick={() =>this.props.personOpenEditDetail(this.props.data, this.props.keyName) }
@@ -44,4 +44,4 @@ const mapStateToProps = state => ({
 });
 
 
-export default connect(mapStateToProps,{ getPersonDetails, personDeleteDetail, personOpenEditDetail})(PersonDetailActionButtons);
+export default connect(mapStateToProps,{ getPersonDetails, personDeleteDetail, personOpenEditDetail, personDeleteBusinessDetail})(PersonDetailActionButtons);

@@ -136,14 +136,14 @@ class IPDetailSerializer(serializers.ModelSerializer):
 
 class PersonIPSerializer(serializers.ModelSerializer):
     '''ip_detail = serializers.PrimaryKeyRelatedField(many=True, read_only=True)'''
-    ip_detail = IPDetailSerializer(many=True)
+    business_detail = IPDetailSerializer(many=True,read_only=True)
 
     class Meta:
         model = PersonIP
         fields = (
             'ip_name', 'ip_inn', 'ip_is_active',
             'ip_date_period_from',
-            'ip_date_period_to', 'ip_detail', 'id', 'person')
+            'ip_date_period_to', 'business_detail', 'id', 'person')
 
 
 
@@ -157,29 +157,12 @@ class PersonWorkWOCSerializer(serializers.ModelSerializer):
             'work_date_period_to', 'id', 'person')
 
 
-class PersonCompaniesCEOWOCSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = PersonCompaniesCEOWOC
-        fields = (
-            'company_name', 'company_inn', 'companies_ceo_date_period_from',
-            'companies_ceo_date_period_to',
-            'company_date_period_from', 'company_date_period_to', 'id', 'person')
-
-
-class PersonCompaniesFounderWOCSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = PersonCompaniesFounderWOC
-        fields = (
-            'company_name', 'company_inn', 'company_share',
-            'company_date_period_from', 'company_date_period_to', 'id', 'person')
-
-
 class CompaniesCEOFoundersSerializer(serializers.ModelSerializer):
     class Meta:
         model = CompaniesCEOFounders
         fields = (
             'first_name', 'last_name', 'middle_name',
-            'inn', 'company_date_period_from', 'company_date_period_to', 'id', 'company')
+            'inn', 'id', 'company')
 
 
 class CompaniesFounderPartnersSerializer(serializers.ModelSerializer):
@@ -188,3 +171,27 @@ class CompaniesFounderPartnersSerializer(serializers.ModelSerializer):
         fields = (
             'first_name', 'last_name', 'middle_name',
             'inn', 'company_share', 'id', 'company')
+
+
+class PersonCompaniesCEOWOCSerializer(serializers.ModelSerializer):
+    business_detail = CompaniesCEOFoundersSerializer(many=True, read_only=True)
+
+
+    class Meta:
+        model = PersonCompaniesCEOWOC
+        fields = (
+            'company_name', 'company_inn', 'companies_ceo_date_period_from',
+            'companies_ceo_date_period_to',
+            'company_date_period_from', 'company_date_period_to', 'business_detail', 'id', 'person')
+
+
+class PersonCompaniesFounderWOCSerializer(serializers.ModelSerializer):
+    business_detail = CompaniesFounderPartnersSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = PersonCompaniesFounderWOC
+        fields = (
+            'company_name', 'company_inn', 'company_share',
+            'company_date_period_from', 'company_date_period_to', 'business_detail', 'id', 'person')
+
+

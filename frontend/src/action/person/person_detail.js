@@ -5,7 +5,9 @@ import {
     TOGGLE_PERSON_DETAIL,
     UPDATE_PERSON_DETAIL,
     CLOSE_EDIT_PERSON_DETAIL,
-    SAVE_ADD_PERSON_DETAIL
+    SAVE_ADD_PERSON_DETAIL,
+    CLOSE_EDIT_PERSON_BUSINESS_DETAIL,
+    OPEN_EDIT_PERSON_BUSINESS_DETAIL, OPEN_EDIT_PERSON_DETAIL
 } from './types';
 const API_URL = 'http://localhost:8000';
 
@@ -36,13 +38,37 @@ export const getPersonDetails = (id) => dispatch => {
                 type: GET_PERSON_DETAILS,
                 payload: response.data
             });
-            console.log(response.data)
         }).catch(err=>console.log(err))
     };
 
 export const personDeleteDetail = (id, keyName) => dispatch => {
+    try {
+        console.log(keyName)
+        const url=`${ API_URL }/person_detail_delete/`;
+        const data={ id: id, source: keyName }
+        console.log(data)
+        return axios.delete(url, {
+            data: data
+            }).then(response =>
+        {
+            dispatch({
+                type: DELETE_PERSON_DETAIL,
+                payload: data
+            });
+
+        }).catch(err=>console.log(err))
+    } catch (e) {
+        console.log(e)
+
+    }
+};
+
+export const personDeleteBusinessDetail = (id, keyName) => {
+    try {
+      /*  console.log(keyName)
     const url=`${ API_URL }/person_detail_delete/`;
     const data = {id: id, source: keyName}
+    console.log(data)
     return axios.delete(url, {
             data: data
             }).then(response =>
@@ -51,7 +77,12 @@ export const personDeleteDetail = (id, keyName) => dispatch => {
                 type: DELETE_PERSON_DETAIL,
                 payload: data
             });
-        }).catch(err=>console.log(err))
+            console.log(response)
+        }).catch(err=>console.log(err))*/
+    } catch (e) {
+            alert(e)
+
+    }
     };
 
 /*export const personDeleteDetail = (id, keyName) => dispatch => {
@@ -64,8 +95,8 @@ export const personDeleteDetail = (id, keyName) => dispatch => {
             })
     );
     };*/
-export const personSaveAddDetail = (personDetail, keyName, id) => dispatch => {
-    const data={person_detail: personDetail, source: keyName};
+export const personSaveAddDetail = (personDetail, keyName, id, business_id=null) => dispatch => {
+    const data={person_detail: personDetail, source: keyName, business_id: business_id};
     const url = `${API_URL}/person_detail_create/${id}`;
     return axios.post(url, {
         data: data
@@ -77,15 +108,22 @@ export const personSaveAddDetail = (personDetail, keyName, id) => dispatch => {
                 source: keyName
             }
         });
-    }).then(dispatch({
-        type: CLOSE_EDIT_PERSON_DETAIL
+        dispatch({
+        type: CLOSE_EDIT_PERSON_DETAIL,
+            payload: responce.data
             })
-    ).catch(err => console.log(err))
+    }).catch(err => console.log(err))
 };
 
 
 
 export const personUpdateDetail = (personDetail, keyName) => dispatch => {
+    let close_type;
+    if (keyName === "person_ip" || keyName ==="person_companies_CEO" || keyName ==="person_companies_founder") {
+        close_type = CLOSE_EDIT_PERSON_BUSINESS_DETAIL
+    }else{
+        close_type = CLOSE_EDIT_PERSON_DETAIL
+    }
     const data={person_detail: personDetail, source: keyName};
     const url=`${ API_URL }/person_detail_update/`;
     return axios.put(url, {
@@ -96,7 +134,8 @@ export const personUpdateDetail = (personDetail, keyName) => dispatch => {
             payload: data
         });
     }).then(dispatch({
-        type: CLOSE_EDIT_PERSON_DETAIL
+        type: close_type,
+        payload: data
             })
     ).catch(err => console.log(err))
 };

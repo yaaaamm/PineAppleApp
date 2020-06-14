@@ -10,7 +10,6 @@ import Footer from "./components/layout/footer";
 import PersonAddUpdate from "./components/pages/persons/redux_person_add/PersonAddUpdeteForm";
 import { ConnectedRouter } from 'connected-react-router'
 import configureStore, { history } from './store'
-import { Container, List } from "semantic-ui-react";
 
 
 const initialState = {};
