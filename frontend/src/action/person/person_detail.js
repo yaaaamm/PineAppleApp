@@ -7,7 +7,8 @@ import {
     CLOSE_EDIT_PERSON_DETAIL,
     SAVE_ADD_PERSON_DETAIL,
     CLOSE_EDIT_PERSON_BUSINESS_DETAIL,
-    OPEN_EDIT_PERSON_BUSINESS_DETAIL, OPEN_EDIT_PERSON_DETAIL
+    OPEN_EDIT_PERSON_BUSINESS_DETAIL,
+    OPEN_EDIT_PERSON_DETAIL, UPDATE_BUSINESS_MODAL_AFTER_DELETE_DETAIL
 } from './types';
 const API_URL = 'http://localhost:8000';
 
@@ -43,10 +44,8 @@ export const getPersonDetails = (id) => dispatch => {
 
 export const personDeleteDetail = (id, keyName) => dispatch => {
     try {
-        console.log(keyName)
         const url=`${ API_URL }/person_detail_delete/`;
         const data={ id: id, source: keyName }
-        console.log(data)
         return axios.delete(url, {
             data: data
             }).then(response =>
@@ -55,7 +54,10 @@ export const personDeleteDetail = (id, keyName) => dispatch => {
                 type: DELETE_PERSON_DETAIL,
                 payload: data
             });
-
+            dispatch({
+                type: UPDATE_BUSINESS_MODAL_AFTER_DELETE_DETAIL,
+                payload: data
+            });
         }).catch(err=>console.log(err))
     } catch (e) {
         console.log(e)

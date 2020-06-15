@@ -11,6 +11,7 @@ import PersonDetailBusinessIP from "./PersonDetailBusinessIP";
 import PersonDetailModal from "./PersonDetailModal";
 import PersonDetailBusinessModal from "./PersonDetailBusinessIPModal";
 import PersonDetailBusinessCompanyCEO from "./PersonDetailBusinessCompanyCEO";
+import PersonDetailBusinessCompanyFounder from "./PersonDetailBusinessCompanyFounder";
 
 
 const  personsService  =  new PersonsService();
@@ -140,7 +141,12 @@ class PersonBase extends Component {
                             return (
                                 <PersonDetailBusinessCompanyCEO key={ key } keyName={ key }/>
                             )
-                        }else if( key !== 'person') {
+                        }else if ( key === 'person_companies_founder')  {
+                            return (
+                                <PersonDetailBusinessCompanyFounder key={ key } keyName={ key }/>
+                            )
+                        }
+                        else if( key !== 'person') {
                             return (
                                 <PersonDetailSingleBlock key={ key } keyName={ key } data={ value }/>)
                         }

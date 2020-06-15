@@ -2,7 +2,9 @@ import {
     OPEN_EDIT_PERSON_DETAIL,
     CLOSE_EDIT_PERSON_DETAIL,
     OPEN_ADD_PERSON_DETAIL,
-    OPEN_EDIT_PERSON_BUSINESS_DETAIL, CLOSE_EDIT_PERSON_BUSINESS_DETAIL,OPEN_ADD_PERSON_BUSINESS_DETAIL
+    OPEN_EDIT_PERSON_BUSINESS_DETAIL,
+    CLOSE_EDIT_PERSON_BUSINESS_DETAIL,
+    OPEN_ADD_PERSON_BUSINESS_DETAIL, UPDATE_BUSINESS_MODAL_AFTER_DELETE_DETAIL
 } from "../action/person/types";
 
 
@@ -133,7 +135,27 @@ export default function (state = initialState, action){
                     isEdit: false
                 }
             };
-
+        case UPDATE_BUSINESS_MODAL_AFTER_DELETE_DETAIL:
+            let newObj=Object.fromEntries(Object.entries(state.person_show_modal_business.person_detail).map(([key, values]) => {
+                     if (key === "business_detail") {
+                         let newArr=values.filter(function ( value ) {
+                                return ( value.id !== action.payload.id )
+                         });
+                         return ([ key, newArr ])
+                     }
+                 return ([key, values])
+                 }));
+            console.log(newObj)
+            return {
+                 ...state,
+                person_show_modal_business: {
+                    display: state.person_show_modal_business.display,
+                    title_for: state.person_show_modal_business.title_for,
+                    person_detail: newObj,
+                    isNew: state.person_show_modal_business.isNew,
+                    isEdit: state.person_show_modal_business.isEdit
+                }
+            };
         default:
             return state;
     }

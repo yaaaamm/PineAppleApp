@@ -25,6 +25,15 @@ class PersonDetailBusinessModal extends Component {
         person_detail: this.props.person_show_modal_business.person_detail,
     };
 
+    componentDidUpdate(prevProps, prevState) {
+        if (prevProps.person_show_modal_business !== this.props.person_show_modal_business) {
+            this.setState({
+                person_detail: this.props.person_show_modal_business.person_detail,
+            });
+        }
+    }
+
+
     onChange=(e) => this.setState({
         person_detail: Object.fromEntries(Object.entries(this.state.person_detail).map(([key, value]) => {
             if (key === e.target.name) {

@@ -17,7 +17,6 @@ class PersonDetailBusinessIP extends Component {
                     <tr>
                         <th rowSpan="1">Название ИП</th>
                         <th rowSpan="1">ИНН</th>
-                        <th rowSpan="1">Действует?</th>
                         <th rowSpan="1">Период работы с</th>
                         <th rowSpan="1">Период работы по</th>
                         <th rowSpan="1">Основной ОКВЕД</th>

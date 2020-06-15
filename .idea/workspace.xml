@@ -2,31 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49d5d8b4-0721-49fd-8cfd-9f32a69d2817" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Yam.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessCompanyCEO.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessCompanyTableBody.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessIPModal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/migrations/0027_auto_20200612_1219.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/migrations/0028_auto_20200614_1116.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/migrations/0029_auto_20200614_1910.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessCompanyFounder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessCompanyTableBodyFounder.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/action/person/person_detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/action/person/person_detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/action/person/person_detail_edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/action/person/person_detail_edit.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/action/person/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/action/person/types.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonBase.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonBase.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailActionButtons.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailActionButtons.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessIP.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessIP.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessIPTableHeadBody.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessIPTableBody.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessCompanyCEO.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessCompanyCEO.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessCompanyTableBody.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessCompanyTableBody.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessIPModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessIPModal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailConstTableTitles.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailConstTableTitles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailSingleBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailSingleBlock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailTabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailTabs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailViewTableBody.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailViewTableBody.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/redusers/person_detail_edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redusers/person_detail_edit.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/redusers/person_details.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redusers/person_details.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/views.py" afterDir="false" />
     </list>
@@ -105,7 +93,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -203,7 +191,9 @@
       <workItem from="1591602672906" duration="45270000" />
       <workItem from="1591767659306" duration="26110000" />
       <workItem from="1592041794417" duration="23860000" />
-      <workItem from="1592126958078" duration="9240000" />
+      <workItem from="1592126958078" duration="9282000" />
+      <workItem from="1592194940460" duration="6923000" />
+      <workItem from="1592201900955" duration="3894000" />
     </task>
     <servers />
   </component>

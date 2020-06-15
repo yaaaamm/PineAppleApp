@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import PersonDetailActionButtons from "./PersonDetailActionButtons";
 
 
-class PersonDetailBusinessCompanyTableBody extends Component {
+class PersonDetailBusinessCompanyTableBodyFounder extends Component {
 
 
 
@@ -13,6 +13,7 @@ class PersonDetailBusinessCompanyTableBody extends Component {
                 <td rowSpan="1">{ data.last_name }</td>
                 <td rowSpan="1">{ data.middle_name }</td>
                 <td rowSpan="1">{ data.inn }</td>
+                <td rowSpan="1">{ data.company_share }</td>
             </>
         )
     }
@@ -30,6 +31,7 @@ class PersonDetailBusinessCompanyTableBody extends Component {
                             <td rowSpan="1">{ value.last_name }</td>
                             <td rowSpan="1">{ value.middle_name }</td>
                             <td rowSpan="1">{ value.inn }</td>
+                            <td rowSpan="1">{ value.company_share }</td>
                         </tr>)
                 }
             }))
@@ -53,7 +55,7 @@ class PersonDetailBusinessCompanyTableBody extends Component {
                             <td rowSpan={ row_span } key={ key }>{ value }</td>)
                     }
                 }) }
-            { (this.props.data['business_detail'].length === 0) ? <><td></td><td></td><td></td><td></td></> : this.firstTD(this.props.data['business_detail'][0])}
+            { (this.props.data['business_detail'].length === 0) ? <><td></td><td></td><td></td><td></td><td></td></> : this.firstTD(this.props.data['business_detail'][0])}
                 <PersonDetailActionButtons data={this.props.data} keyName={ this.props.keyName } rowSpan={ row_span } />
             </tr>
 
@@ -62,4 +64,4 @@ class PersonDetailBusinessCompanyTableBody extends Component {
                 }
 }
 
-export default PersonDetailBusinessCompanyTableBody;
+export default PersonDetailBusinessCompanyTableBodyFounder;

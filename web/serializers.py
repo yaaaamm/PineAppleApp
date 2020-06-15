@@ -135,13 +135,12 @@ class IPDetailSerializer(serializers.ModelSerializer):
 
 
 class PersonIPSerializer(serializers.ModelSerializer):
-    '''ip_detail = serializers.PrimaryKeyRelatedField(many=True, read_only=True)'''
     business_detail = IPDetailSerializer(many=True,read_only=True)
 
     class Meta:
         model = PersonIP
         fields = (
-            'ip_name', 'ip_inn', 'ip_is_active',
+            'ip_name', 'ip_inn',
             'ip_date_period_from',
             'ip_date_period_to', 'business_detail', 'id', 'person')
 
@@ -182,7 +181,7 @@ class PersonCompaniesCEOWOCSerializer(serializers.ModelSerializer):
         fields = (
             'company_name', 'company_inn', 'companies_ceo_date_period_from',
             'companies_ceo_date_period_to',
-            'company_date_period_from', 'company_date_period_to', 'business_detail', 'id', 'person')
+            'business_detail', 'id', 'person')
 
 
 class PersonCompaniesFounderWOCSerializer(serializers.ModelSerializer):
@@ -192,6 +191,6 @@ class PersonCompaniesFounderWOCSerializer(serializers.ModelSerializer):
         model = PersonCompaniesFounderWOC
         fields = (
             'company_name', 'company_inn', 'company_share',
-            'company_date_period_from', 'company_date_period_to', 'business_detail', 'id', 'person')
+            'business_detail', 'id', 'person')
 
 

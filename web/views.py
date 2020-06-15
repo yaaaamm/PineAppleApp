@@ -65,7 +65,6 @@ def person_detail_create(request, id):
         source = body['data']['source']
         data = body['data']['person_detail']
         data['person'] = id
-        print(source)
         if source == "person_previous_last_names":
             serializer = PersonРreviousLastNameSerializer(data=data)
         elif source == "person_addresses":
@@ -107,9 +106,11 @@ def person_detail_create(request, id):
         elif source == "person_companies_CEO_business_detail":
             data['company'] = body['data']['business_id']
             serializer = CompaniesCEOFoundersSerializer(data=data)
-        serializer.is_valid()
-        print(serializer.errors)
-        print(data)
+        elif source == "person_companies_founder":
+            serializer = PersonCompaniesFounderWOCSerializer(data=data)
+        elif source == "person_companies_founder_business_detail":
+            data['company'] = body['data']['business_id']
+            serializer = CompaniesFounderPartnersSerializer(data=data)
         if serializer and serializer.is_valid():
             if serializer.is_valid():
                 serializer.save()
@@ -316,6 +317,16 @@ def person_detail_update(request):
             business_detail = CompaniesCEOFounders.objects.get(id=data['id'])
             serializer = CompaniesCEOFoundersSerializer(business_detail, data=data,
                                             context={'request': request})
+        elif source == "person_companies_founder":
+            person_companies_CEO = PersonCompaniesFounderWOC.objects.get(id=data['id'])
+            serializer = PersonCompaniesFounderWOCSerializer(person_companies_CEO, data=data,
+                                            context={'request': request})
+
+
+        elif source == "person_companies_founder_business_detail":
+            business_detail = CompaniesFounderPartners.objects.get(id=data['id'])
+            serializer = CompaniesFounderPartnersSerializer(business_detail, data=data,
+                                            context={'request': request})
 
 
         if serializer and serializer.is_valid():
@@ -369,6 +380,10 @@ def person_detail_delete(request):
             person_details = PersonCompaniesCEOWOC.objects.get(id=id)
         elif source == "person_companies_CEO_business_detail":
             person_details = CompaniesCEOFounders.objects.get(id=id)
+        elif source == "person_companies_founder":
+            person_details = PersonCompaniesFounderWOC.objects.get(id=id)
+        elif source == "person_companies_founder_business_detail":
+            person_details = CompaniesFounderPartners.objects.get(id=id)
         else:
             return Response(status=status.HTTP_400_BAD_REQUEST)
         print(person_details)

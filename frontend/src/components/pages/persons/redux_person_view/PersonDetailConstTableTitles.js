@@ -15,8 +15,8 @@ export const main_titles ={
     person_social_relations_group_cm: 'Группы Одноклассники в которых состоит человек',
     person_ip: 'Данные об ИП',
     person_work: 'Данные о работе',
-    person_companies_CEO: 'Где являлся Генеральным директором',
-    person_companies_founder: 'Где являлся учредитем'
+    person_companies_CEO: 'Генеральный директор',
+    person_companies_founder: 'Учредитель'
 };
 
 export const tab_titles ={
@@ -118,7 +118,6 @@ const person_social_relations_group_cm ={
 const person_ip ={
     ip_name: 'Название ИП',
     ip_inn: 'ИНН',
-    ip_is_active: 'Действует?',
     ip_date_period_from: 'Период работы с',
     ip_date_period_to: 'Период работы по',
 };
@@ -136,16 +135,12 @@ const person_companies_CEO ={
     company_inn: 'ИНН',
     companies_ceo_date_period_from: 'Ген. дир с',
     companies_ceo_date_period_to: 'Ген. дир по',
-    company_date_period_from: 'Период работы компании с',
-    company_date_period_to: 'Период работы компании по',
 };
 
 const person_companies_founder ={
     company_name: 'Название компании',
     company_inn: 'ИНН',
     company_share: 'Доля в компании',
-    company_date_period_from: 'Период работы компании с',
-    company_date_period_to: 'Период работы компании по',
 };
 
 const person_ip_business_detail = {
@@ -156,6 +151,14 @@ const person_companies_CEO_business_detail = {
     last_name: 'Фамилия',
     middle_name: 'Отчество',
     inn: 'ИНН',
+};
+
+const person_companies_founder_business_detail = {
+    first_name: 'Имя',
+    last_name: 'Фамилия',
+    middle_name: 'Отчество',
+    inn: 'ИНН',
+    company_share: 'Доля в компании (%)'
 };
 
 export default function getPersonDetailTableTitle(title) {
@@ -200,6 +203,8 @@ export default function getPersonDetailTableTitle(title) {
             return person_companies_founder;
         case "person_companies_CEO_business_detail":
             return person_companies_CEO_business_detail;
+        case "person_companies_founder_business_detail":
+            return person_companies_founder_business_detail;
         default:
             return title;
     }
