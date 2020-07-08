@@ -2,19 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49d5d8b4-0721-49fd-8cfd-9f32a69d2817" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessCompanyFounder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessCompanyTableBodyFounder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/migrations/0030_personpassport.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/migrations/0031_auto_20200706_1416.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/migrations/0032_auto_20200706_1421.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0891c826-b7b2-4a02-a7a6-faa28d6f8a47.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0891c826-b7b2-4a02-a7a6-faa28d6f8a47.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/action/person/person_detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/action/person/person_detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/action/person/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/action/person/types.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonBase.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonBase.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessCompanyCEO.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessCompanyCEO.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessCompanyTableBody.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessCompanyTableBody.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessIPModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessIPModal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailConstTableTitles.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailConstTableTitles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redusers/person_detail_edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redusers/person_detail_edit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redusers/person_details.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redusers/person_details.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonMainData.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonMainData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/views.py" afterDir="false" />
     </list>
@@ -102,23 +98,23 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
-    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PyCharm 2019.3.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\pycharm\Projects\DjangoProjects\pineappleApp\frontend\src\components\pages\persons\redux_person_view" />
-      <recent name="D:\pycharm\Projects\DjangoProjects\pineappleApp\web" />
-      <recent name="D:\pycharm\Projects\DjangoProjects\pineappleApp\frontend\src\components\pages\persons\redux_person_add" />
-      <recent name="D:\pycharm\Projects\DjangoProjects\pineappleApp\frontend\src\action\company" />
-      <recent name="D:\pycharm\Projects\DjangoProjects\pineappleApp\frontend\src\components\pages\companies\redux_company_add_view" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\pycharm\Projects\DjangoProjects\pineappleApp\frontend\src\action\person" />
       <recent name="D:\pycharm\Projects\DjangoProjects\pineappleApp\frontend\src\components\pages\persons\redux_person_view" />
       <recent name="D:\pycharm\Projects\DjangoProjects\pineappleApp\frontend\src\components\pages\persons\persons_list" />
       <recent name="D:\pycharm\Projects\DjangoProjects\pineappleApp\pineappleApp" />
       <recent name="D:\pycharm\Projects\DjangoProjects\pineappleApp\web" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\pycharm\Projects\DjangoProjects\pineappleApp\frontend\src\components\pages\persons\redux_person_view" />
+      <recent name="D:\pycharm\Projects\DjangoProjects\pineappleApp\web" />
+      <recent name="D:\pycharm\Projects\DjangoProjects\pineappleApp\frontend\src\components\pages\persons\redux_person_add" />
+      <recent name="D:\pycharm\Projects\DjangoProjects\pineappleApp\frontend\src\action\company" />
+      <recent name="D:\pycharm\Projects\DjangoProjects\pineappleApp\frontend\src\components\pages\companies\redux_company_add_view" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.address.html">
@@ -193,7 +189,10 @@
       <workItem from="1592041794417" duration="23860000" />
       <workItem from="1592126958078" duration="9282000" />
       <workItem from="1592194940460" duration="6923000" />
-      <workItem from="1592201900955" duration="3894000" />
+      <workItem from="1592201900955" duration="5632000" />
+      <workItem from="1592369703503" duration="742000" />
+      <workItem from="1592396941999" duration="3653000" />
+      <workItem from="1594031821678" duration="3333000" />
     </task>
     <servers />
   </component>
@@ -218,10 +217,10 @@
     </state>
     <state x="769" y="267" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1589806448209" />
     <state x="769" y="267" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1589106531884" />
-    <state x="709" y="355" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1587715949189">
+    <state x="709" y="355" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1592398890121">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="709" y="355" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587715949189" />
+    <state x="709" y="355" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592398890121" />
     <state x="718" y="390" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1590767239695">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -259,10 +258,10 @@
     </state>
     <state width="1876" height="277" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1587660979023" />
     <state width="1876" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587731010522" />
-    <state x="818" y="112" key="SettingsEditor" timestamp="1587385083990">
+    <state x="818" y="112" key="SettingsEditor" timestamp="1592399883861">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="818" y="112" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1587385083990" />
+    <state x="818" y="112" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1592399883861" />
     <state x="690" y="324" key="com.intellij.database.dbimport.ImportUtil.MyDialog" timestamp="1591617496374">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

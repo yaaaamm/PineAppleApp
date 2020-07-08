@@ -27,6 +27,19 @@ class РreviousLastName(models.Model):
         return False
 
 
+class PersonPassport(models.Model):
+    person = models.ForeignKey(Person, on_delete=models.CASCADE)
+    createdAt = models.DateTimeField("Created At", auto_now_add=True)
+    passport_date_issued = models.DateField("Дата выдачи паспорта", null=True, blank=True)
+    passport_issued = models.CharField("Выдан", max_length=300, blank=True, null=True)
+    passport_code = models.CharField("Код паспорта", max_length=30, blank=True, null=True)
+    passport_series = models.CharField("Серия паспорта", max_length=30, blank=True, null=True)
+    passport_number = models.CharField("Номер паспорта", max_length=30, blank=True, null=True)
+    passport_birthday_country = models.CharField("Место рождения (страна)", max_length=30, blank=True, null=True)
+    passport_birthday_city = models.CharField("Место рождения (город)", max_length=30, blank=True, null=True)
+    passport_address = models.CharField("Ардес регистрации", max_length=300, blank=True, null=True)
+
+
 class PersonAddress(models.Model):
     person = models.ForeignKey(Person, on_delete=models.CASCADE)
     createdAt = models.DateTimeField("Created At", auto_now_add=True)

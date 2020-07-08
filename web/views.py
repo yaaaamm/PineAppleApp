@@ -67,6 +67,8 @@ def person_detail_create(request, id):
         data['person'] = id
         if source == "person_previous_last_names":
             serializer = PersonРreviousLastNameSerializer(data=data)
+        elif source == "person_passport":
+            serializer = PersonPassportSerializer(data=data)
         elif source == "person_addresses":
             serializer = PersonAddressSerializer(data=data)
         elif source == "person_education":
@@ -111,6 +113,8 @@ def person_detail_create(request, id):
         elif source == "person_companies_founder_business_detail":
             data['company'] = body['data']['business_id']
             serializer = CompaniesFounderPartnersSerializer(data=data)
+        serializer.is_valid()
+        print(serializer.errors)
         if serializer and serializer.is_valid():
             if serializer.is_valid():
                 serializer.save()
@@ -141,6 +145,7 @@ def person_detail(request, id):
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     person_previous_last_names = РreviousLastName.objects.filter(person=person_data.id)
+    person_passport = PersonPassport.objects.filter(person=person_data.id)
     person_addresses = PersonAddress.objects.filter(person=person_data.id)
     person_education = PersonEducation.objects.filter(person=person_data.id)
     person_social_net = PersonSocialNet.objects.filter(person=person_data.id)
@@ -163,6 +168,8 @@ def person_detail(request, id):
         person_serializer = PersonSerializer(person_data, context={'request': request})
         person_previous_last_name_serializer = PersonРreviousLastNameSerializer(person_previous_last_names,
                                                                                 context={'request': request}, many=True)
+        person_passport_serializer = PersonPassportSerializer(person_passport, context={'request': request}, many=True)
+
         person_addresses_serializer = PersonAddressSerializer(person_addresses,
                                                               context={'request': request}, many=True)
         person_education_serializer = PersonEducationSerializer(person_education,
@@ -214,6 +221,7 @@ def person_detail(request, id):
             {
                 'person': person_serializer.data,
                 'person_previous_last_names': person_previous_last_name_serializer.data,
+                'person_passport': person_passport_serializer.data,
                 'person_addresses': person_addresses_serializer.data,
                 'person_education': person_education_serializer.data,
                 'person_social_net': person_social_net_serializer.data,
@@ -248,6 +256,9 @@ def person_detail_update(request):
             person_previous_last_names = РreviousLastName.objects.get(id=data['id'])
             serializer = PersonРreviousLastNameSerializer(person_previous_last_names, data=data,
                                                           context={'request': request})
+        elif source == "person_passport":
+            person_passport = PersonPassport.objects.get(id=data['id'])
+            serializer = PersonAddressSerializer(person_passport, data=data, context={'request': request})
         elif source == "person_addresses":
             person_addresses = PersonAddress.objects.get(id=data['id'])
             serializer = PersonAddressSerializer(person_addresses, data=data, context={'request': request})
@@ -344,6 +355,8 @@ def person_detail_delete(request):
         id = body['id']
         if source == "person_previous_last_names":
             person_details = РreviousLastName.objects.get(id=id)
+        elif source == "person_passport":
+            person_details = PersonPassport.objects.get(id=id)
         elif source == "person_addresses":
             person_details = PersonAddress.objects.get(id=id)
         elif source == "person_education":

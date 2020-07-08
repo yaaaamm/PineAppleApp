@@ -1,5 +1,6 @@
 export const main_titles ={
     person_previous_last_names: 'Предыдущая фамилия',
+    person_passport: 'Паспорт',
     person_addresses: 'Адрес',
     person_education: 'Образование',
     person_social_net: 'Соц. сети',
@@ -33,6 +34,17 @@ export const tab_titles ={
 const person_previous_last_names = {
     last_name: 'Фамилия',
 };
+const person_passport ={
+    passport_date_issued: 'Дата Выдачи',
+    passport_issued: 'Выдан',
+    passport_code: 'Код паспорта',
+    passport_series: 'Серия паспорта',
+    passport_number: 'Номер паспорта',
+    passport_birthday_country: 'Место рождения (страна)',
+    passport_birthday_city: 'Место рождения (город)',
+    passport_address: 'Ардес регистрации',
+};
+
 const person_addresses ={
     country: 'Страна',
     region: 'Регион',
@@ -165,6 +177,8 @@ export default function getPersonDetailTableTitle(title) {
     switch(title){
         case "person_previous_last_names":
             return person_previous_last_names;
+        case "person_passport":
+            return person_passport;
         case "person_addresses":
             return person_addresses;
         case "person_education":

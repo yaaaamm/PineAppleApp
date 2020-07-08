@@ -3,7 +3,7 @@ from .models import Person, РreviousLastName, PersonAddress, PersonEducation, P
     PersonSocialRelationsVK, PersonSocialRelationsFB, PersonSocialRelationsInst, \
     PersonSocialRelationsCM, PersonSocialRelationsGroupVK, PersonSocialRelationsGroupFB, PersonSocialRelationsGroupInst, \
     PersonSocialRelationsGroupCM, PersonWork, PersonFellowTraveler, PersonIP, PersonWorkWOC, PersonCompaniesCEOWOC, \
-    PersonCompaniesFounderWOC, CompaniesCEOFounders, CompaniesFounderPartners, IPDetail
+    PersonCompaniesFounderWOC, CompaniesCEOFounders, CompaniesFounderPartners, IPDetail, PersonPassport
 
 
 class PersonSerializer(serializers.ModelSerializer):
@@ -16,6 +16,14 @@ class PersonРreviousLastNameSerializer(serializers.ModelSerializer):
     class Meta:
         model = РreviousLastName
         fields = ('last_name', 'id', 'person')
+
+
+class PersonPassportSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PersonPassport
+        fields = (
+            'passport_date_issued', 'passport_issued', 'passport_code', 'passport_series', 'passport_number', 'passport_birthday_country', 'passport_birthday_city', 'passport_address', 'id',
+            'person')
 
 
 class PersonAddressSerializer(serializers.ModelSerializer):

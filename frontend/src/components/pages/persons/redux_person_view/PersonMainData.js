@@ -13,7 +13,7 @@ function PersonMainData(props) {
                         <Link to={ `/person_update/${ id }` } className="btn btn-outline-info">
                             <i className="fas fa-edit"></i></Link>
                     </div>
-                    <p>Дата рождения: { moment(date_birthday).calendar() }  </p>
+                    <p>Дата рождения: { moment(date_birthday || null).calendar() }  </p>
                     <p>Характеристика: { person_characteristic }</p>
                     <p>Комментарий: { person_comment }</p>
                     <p>Негатив: { person_negative }</p>
