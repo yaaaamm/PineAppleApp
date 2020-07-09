@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="49d5d8b4-0721-49fd-8cfd-9f32a69d2817" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/migrations/0030_personpassport.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/migrations/0031_auto_20200706_1416.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/migrations/0032_auto_20200706_1421.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0891c826-b7b2-4a02-a7a6-faa28d6f8a47.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0891c826-b7b2-4a02-a7a6-faa28d6f8a47.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailConstTableTitles.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailConstTableTitles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonMainData.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonMainData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="49d5d8b4-0721-49fd-8cfd-9f32a69d2817" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -193,6 +181,7 @@
       <workItem from="1592369703503" duration="742000" />
       <workItem from="1592396941999" duration="3653000" />
       <workItem from="1594031821678" duration="3333000" />
+      <workItem from="1594192823872" duration="200000" />
     </task>
     <servers />
   </component>
