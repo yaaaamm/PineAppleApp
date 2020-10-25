@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="49d5d8b4-0721-49fd-8cfd-9f32a69d2817" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pineappleApp/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/pineappleApp/wsgi.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,19 +95,19 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PyCharm 2019.3.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\pycharm\Projects\DjangoProjects\pineappleApp\frontend\src\action\person" />
-      <recent name="D:\pycharm\Projects\DjangoProjects\pineappleApp\frontend\src\components\pages\persons\redux_person_view" />
-      <recent name="D:\pycharm\Projects\DjangoProjects\pineappleApp\frontend\src\components\pages\persons\persons_list" />
-      <recent name="D:\pycharm\Projects\DjangoProjects\pineappleApp\pineappleApp" />
-      <recent name="D:\pycharm\Projects\DjangoProjects\pineappleApp\web" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\pycharm\Projects\DjangoProjects\pineappleApp\frontend\src\components\pages\persons\redux_person_view" />
       <recent name="D:\pycharm\Projects\DjangoProjects\pineappleApp\web" />
       <recent name="D:\pycharm\Projects\DjangoProjects\pineappleApp\frontend\src\components\pages\persons\redux_person_add" />
       <recent name="D:\pycharm\Projects\DjangoProjects\pineappleApp\frontend\src\action\company" />
       <recent name="D:\pycharm\Projects\DjangoProjects\pineappleApp\frontend\src\components\pages\companies\redux_company_add_view" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\pycharm\Projects\DjangoProjects\pineappleApp\frontend\src\action\person" />
+      <recent name="D:\pycharm\Projects\DjangoProjects\pineappleApp\frontend\src\components\pages\persons\redux_person_view" />
+      <recent name="D:\pycharm\Projects\DjangoProjects\pineappleApp\frontend\src\components\pages\persons\persons_list" />
+      <recent name="D:\pycharm\Projects\DjangoProjects\pineappleApp\pineappleApp" />
+      <recent name="D:\pycharm\Projects\DjangoProjects\pineappleApp\web" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.address.html">
@@ -188,7 +190,7 @@
       <workItem from="1595179673892" duration="1272000" />
       <workItem from="1595340243214" duration="805000" />
       <workItem from="1603638445485" duration="703000" />
-      <workItem from="1603642110703" duration="4085000" />
+      <workItem from="1603642110703" duration="5608000" />
     </task>
     <servers />
   </component>
