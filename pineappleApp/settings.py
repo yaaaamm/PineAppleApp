@@ -28,7 +28,7 @@ SECRET_KEY = 'r=veh(i5qr7tu1=h79f%o+^i%^rq2b_we%j9mqoq&rta%%@95p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['pineapple-app.herokuapp.com', '127.0.0.1:8000']
+ALLOWED_HOSTS = ['pineapple-app.herokuapp.com', '127.0.0.1:8000', 'localhost']
 
 
 # Application definition
