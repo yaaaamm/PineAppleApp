@@ -74,6 +74,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -188,7 +189,7 @@
       <workItem from="1595340243214" duration="805000" />
       <workItem from="1603638445485" duration="703000" />
       <workItem from="1603642110703" duration="6681000" />
-      <workItem from="1603651942100" duration="5014000" />
+      <workItem from="1603651942100" duration="6053000" />
     </task>
     <servers />
   </component>
