@@ -2,12 +2,358 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49d5d8b4-0721-49fd-8cfd-9f32a69d2817" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0891c826-b7b2-4a02-a7a6-faa28d6f8a47.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0891c826-b7b2-4a02-a7a6-faa28d6f8a47.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Yam.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Yam.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/pineappleApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pineappleApp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/action/company/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/action/company/types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/action/person/person_detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/action/person/person_detail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/action/person/person_detail_edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/action/person/person_detail_edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/action/person/persons.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/action/person/persons.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/action/person/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/action/person/types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/layout/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/layout/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/layout/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/layout/footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/companies/redux_company_view/CompanyBase.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/companies/redux_company_view/CompanyBase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/person_view/Addresses.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/person_view/Addresses.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/person_view/PersonBase.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/person_view/PersonBase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/person_view/PersonInfoTableView.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/person_view/PersonInfoTableView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/person_view/РreviousLastName.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/person_view/РreviousLastName.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/persons_list/PersonsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/persons_list/PersonsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/persons_list/PersonsListItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/persons_list/PersonsListItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/persons_service/PersonsService.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/persons_service/PersonsService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/persons_service/Style.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/persons_service/Style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_add/PersonAddUpdeteForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_add/PersonAddUpdeteForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_list/PersonsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_list/PersonsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonBase.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonBase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailActionButtons.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailActionButtons.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessCompanyCEO.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessCompanyCEO.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessCompanyFounder.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessCompanyFounder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessCompanyTableBody.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessCompanyTableBody.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessCompanyTableBodyFounder.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessCompanyTableBodyFounder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessIP.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessIP.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessIPModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessIPModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessIPTableBody.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailBusinessIPTableBody.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailConstTableTitles.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailConstTableTitles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailSingleBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailSingleBlock.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailTabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailTabs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailViewTableBody.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailViewTableBody.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailViewTableHeaders.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonDetailViewTableHeaders.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonMainData.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/PersonMainData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/ZNOT_USE_PersonConfirmActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/ZNOT_USE_PersonConfirmActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/ZNOT_USE_PersonDetailEditTableBody.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/ZNOT_USE_PersonDetailEditTableBody.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/ZNOT_USE_PersonDetailModalSemantic.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/ZNOT_USE_PersonDetailModalSemantic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/ZNOT_USE_PersonDetailView_class.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/ZNOT_USE_PersonDetailView_class.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/ZNOT_USE_tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pages/persons/redux_person_view/ZNOT_USE_tabs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/history.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/history.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redusers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redusers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redusers/person_detail_edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redusers/person_detail_edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redusers/person_details.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redusers/person_details.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redusers/persons.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redusers/persons.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pineappleApp/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/pineappleApp/asgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pineappleApp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/pineappleApp/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pineappleApp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/pineappleApp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pineappleApp/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/pineappleApp/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime.txt" beforeDir="false" afterPath="$PROJECT_DIR$/runtime.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/company/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/company/types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/person/person_detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/person/person_detail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/person/person_detail_edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/person/person_detail_edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/person/persons.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/person/persons.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/person/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/person/types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/companies/redux_company_view/CompanyBase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/companies/redux_company_view/CompanyBase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/persons/person_view/Addresses.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/persons/person_view/Addresses.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/persons/person_view/PersonBase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/persons/person_view/PersonBase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/persons/person_view/PersonInfoTableView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/persons/person_view/PersonInfoTableView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/persons/person_view/РreviousLastName.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/persons/person_view/РreviousLastName.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/persons/persons_list/PersonsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/persons/persons_list/PersonsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/persons/persons_list/PersonsListItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/persons/persons_list/PersonsListItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/persons/persons_service/PersonsService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/persons/persons_service/PersonsService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/persons/persons_service/Style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/persons/persons_service/Style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/persons/redux_person_add/PersonAddUpdeteForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/persons/redux_person_add/PersonAddUpdeteForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/persons/redux_person_list/PersonsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/persons/redux_person_list/PersonsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/PersonBase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/PersonBase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/PersonDetailActionButtons.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/PersonDetailActionButtons.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/PersonDetailBusinessCompanyCEO.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/PersonDetailBusinessCompanyCEO.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/PersonDetailBusinessCompanyFounder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/PersonDetailBusinessCompanyFounder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/PersonDetailBusinessCompanyTableBody.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/PersonDetailBusinessCompanyTableBody.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/PersonDetailBusinessCompanyTableBodyFounder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/PersonDetailBusinessCompanyTableBodyFounder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/PersonDetailBusinessIP.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/PersonDetailBusinessIP.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/PersonDetailBusinessIPModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/PersonDetailBusinessIPModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/PersonDetailBusinessIPTableBody.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/PersonDetailBusinessIPTableBody.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/PersonDetailConstTableTitles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/PersonDetailConstTableTitles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/PersonDetailModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/PersonDetailModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/PersonDetailSingleBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/PersonDetailSingleBlock.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/PersonDetailTabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/PersonDetailTabs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/PersonDetailViewTableBody.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/PersonDetailViewTableBody.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/PersonDetailViewTableHeaders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/PersonDetailViewTableHeaders.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/PersonMainData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/PersonMainData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/ZNOT_USE_PersonConfirmActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/ZNOT_USE_PersonConfirmActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/ZNOT_USE_PersonDetailEditTableBody.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/ZNOT_USE_PersonDetailEditTableBody.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/ZNOT_USE_PersonDetailModalSemantic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/ZNOT_USE_PersonDetailModalSemantic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/ZNOT_USE_PersonDetailView_class.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/ZNOT_USE_PersonDetailView_class.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/ZNOT_USE_tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/persons/redux_person_view/ZNOT_USE_tabs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/history.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/history.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redusers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redusers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redusers/person_detail_edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redusers/person_detail_edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redusers/person_details.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redusers/person_details.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redusers/persons.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redusers/persons.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/admin/fonts/LICENSE.d273d63619c9.txt" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/fonts/LICENSE.d273d63619c9.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/admin/fonts/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/fonts/LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_old/add_person.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates_old/add_person.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_old/address.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates_old/address.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_old/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates_old/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_old/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates_old/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_old/person_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates_old/person_base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_old/person_educations.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates_old/person_educations.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_old/person_family_ties.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates_old/person_family_ties.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_old/person_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates_old/person_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_old/person_social_net.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates_old/person_social_net.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_old/previous_last_name.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates_old/previous_last_name.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/Django-3.0.5.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/Django-3.0.5.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/address-0.1.1-py3.8.egg-info/PKG-INFO" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/address-0.1.1-py3.8.egg-info/PKG-INFO" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/address-0.1.1-py3.8.egg-info/installed-files.txt" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/address-0.1.1-py3.8.egg-info/installed-files.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/asgiref-3.2.7.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/asgiref-3.2.7.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/bootstrap.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/bootstrap.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/compatibility.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/compatibility.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/exceptions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/helper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/layout.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/layout.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/layout_slice.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/layout_slice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/accordion-group.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/accordion-group.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/accordion.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/accordion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/betterform.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/betterform.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/display_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/display_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/errors.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/errors.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/errors_formset.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/errors_formset.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/field.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/field.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/alert.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/alert.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/baseinput.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/baseinput.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/button.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/button.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/buttonholder.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/buttonholder.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/checkboxselectmultiple.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/checkboxselectmultiple.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/checkboxselectmultiple_inline.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/checkboxselectmultiple_inline.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/column.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/column.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/div.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/div.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/field_errors.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/field_errors.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/field_errors_block.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/field_errors_block.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/field_with_buttons.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/field_with_buttons.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/fieldset.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/fieldset.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/formactions.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/formactions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/help_text.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/help_text.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/help_text_and_errors.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/help_text_and_errors.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/multifield.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/multifield.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/prepended_appended_text.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/prepended_appended_text.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/radioselect.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/radioselect.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/radioselect_inline.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/radioselect_inline.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/row.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/row.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/tab-link.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/tab-link.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/tab.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/tab.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/uneditable_input.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/layout/uneditable_input.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/table_inline_formset.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/table_inline_formset.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/uni_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/uni_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/uni_formset.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/uni_formset.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/whole_uni_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/whole_uni_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/whole_uni_formset.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap/whole_uni_formset.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/accordion-group.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/accordion-group.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/accordion.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/accordion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/betterform.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/betterform.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/display_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/display_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/errors.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/errors.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/errors_formset.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/errors_formset.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/field.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/field.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/inputs.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/inputs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/alert.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/alert.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/baseinput.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/baseinput.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/button.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/button.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/buttonholder.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/buttonholder.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/checkboxselectmultiple.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/checkboxselectmultiple.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/checkboxselectmultiple_inline.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/checkboxselectmultiple_inline.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/column.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/column.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/div.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/div.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/field_errors.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/field_errors.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/field_errors_block.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/field_errors_block.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/field_with_buttons.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/field_with_buttons.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/fieldset.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/fieldset.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/formactions.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/formactions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/help_text.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/help_text.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/help_text_and_errors.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/help_text_and_errors.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/inline_field.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/inline_field.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/multifield.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/multifield.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/prepended_appended_text.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/prepended_appended_text.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/radioselect.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/radioselect.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/radioselect_inline.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/radioselect_inline.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/row.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/row.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/tab-link.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/tab-link.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/tab.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/tab.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/uneditable_input.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/layout/uneditable_input.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/multifield.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/multifield.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/table_inline_formset.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/table_inline_formset.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/uni_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/uni_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/uni_formset.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/uni_formset.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/whole_uni_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/whole_uni_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/whole_uni_formset.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap3/whole_uni_formset.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/accordion-group.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/accordion-group.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/accordion.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/accordion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/betterform.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/betterform.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/display_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/display_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/errors.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/errors.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/errors_formset.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/errors_formset.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/field.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/field.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/inputs.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/inputs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/alert.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/alert.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/baseinput.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/baseinput.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/button.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/button.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/buttonholder.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/buttonholder.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/checkboxselectmultiple.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/checkboxselectmultiple.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/checkboxselectmultiple_inline.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/checkboxselectmultiple_inline.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/column.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/column.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/div.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/div.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/field_errors.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/field_errors.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/field_errors_block.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/field_errors_block.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/field_file.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/field_file.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/field_with_buttons.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/field_with_buttons.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/fieldset.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/fieldset.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/formactions.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/formactions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/help_text.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/help_text.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/help_text_and_errors.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/help_text_and_errors.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/inline_field.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/inline_field.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/multifield.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/multifield.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/prepended_appended_text.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/prepended_appended_text.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/radioselect.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/radioselect.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/radioselect_inline.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/radioselect_inline.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/row.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/row.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/tab-link.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/tab-link.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/tab.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/tab.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/uneditable_input.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/layout/uneditable_input.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/table_inline_formset.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/table_inline_formset.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/uni_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/uni_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/uni_formset.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/uni_formset.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/whole_uni_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/whole_uni_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/whole_uni_formset.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/bootstrap4/whole_uni_formset.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/uni_form/betterform.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/uni_form/betterform.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/uni_form/display_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/uni_form/display_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/uni_form/errors.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/uni_form/errors.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/uni_form/errors_formset.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/uni_form/errors_formset.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/uni_form/field.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/uni_form/field.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/uni_form/field.strict.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/uni_form/field.strict.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/uni_form/layout/baseinput.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/uni_form/layout/baseinput.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/uni_form/layout/buttonholder.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/uni_form/layout/buttonholder.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/uni_form/layout/column.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/uni_form/layout/column.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/uni_form/layout/div.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/uni_form/layout/div.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/uni_form/layout/fieldset.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/uni_form/layout/fieldset.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/uni_form/layout/multifield.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/uni_form/layout/multifield.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/uni_form/layout/row.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/uni_form/layout/row.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/uni_form/multifield.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/uni_form/multifield.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/uni_form/uni_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/uni_form/uni_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/uni_form/uni_formset.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/uni_form/uni_formset.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/uni_form/whole_uni_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/uni_form/whole_uni_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/uni_form/whole_uni_formset.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templates/uni_form/whole_uni_formset.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templatetags/crispy_forms_field.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templatetags/crispy_forms_field.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templatetags/crispy_forms_filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templatetags/crispy_forms_filters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templatetags/crispy_forms_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templatetags/crispy_forms_tags.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templatetags/crispy_forms_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/templatetags/crispy_forms_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/tests/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/tests/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/tests/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/tests/templates/crispy_render_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/tests/templates/crispy_render_template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/tests/templates/custom_field_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/tests/templates/custom_field_template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/tests/templates/custom_form_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/tests/templates/custom_form_template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/tests/templates/custom_form_template_with_context.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/tests/templates/custom_form_template_with_context.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/tests/test_dynamic_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/tests/test_dynamic_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/tests/test_form_helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/tests/test_form_helper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/tests/test_layout.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/tests/test_layout.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/tests/test_layout_objects.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/tests/test_layout_objects.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/tests/test_settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/tests/test_settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/tests/test_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/tests/test_tags.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/tests/test_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/tests/test_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/tests/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/tests/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/tests/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/tests/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/crispy_forms/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/static/admin/fonts/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/static/admin/fonts/LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django_cors_headers-3.2.1.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django_cors_headers-3.2.1.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django_crispy_forms-1.9.0.dist-info/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django_crispy_forms-1.9.0.dist-info/LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django_crispy_forms-1.9.0.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django_crispy_forms-1.9.0.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django_crispy_forms-1.9.0.dist-info/WHEEL" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django_crispy_forms-1.9.0.dist-info/WHEEL" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/djangorestframework-3.11.0.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/djangorestframework-3.11.0.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/easy-install.pth" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/easy-install.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn-20.0.4.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/gunicorn-20.0.4.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip-19.0.3-py3.8.egg/EGG-INFO/PKG-INFO" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip-19.0.3-py3.8.egg/EGG-INFO/PKG-INFO" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz-2019.3.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz-2019.3.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/setuptools.pth" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/setuptools.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/sqlparse-0.3.1.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/sqlparse-0.3.1.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/whitenoise-5.2.0.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/whitenoise-5.2.0.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/Activate.ps1" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/Activate.ps1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/activate" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/activate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/activate.bat" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/activate.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/deactivate.bat" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/deactivate.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/django-admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/django-admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/easy_install-3.8-script.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/easy_install-3.8-script.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/easy_install-script.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/easy_install-script.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/pip-script.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pip-script.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/pip3-script.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pip3-script.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/pip3.8-script.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pip3.8-script.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/pyvenv.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/venv/pyvenv.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/migrations/0002_auto_20200424_1054.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/migrations/0002_auto_20200424_1054.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/migrations/0003_auto_20200424_1110.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/migrations/0003_auto_20200424_1110.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/migrations/0004_auto_20200424_1523.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/migrations/0004_auto_20200424_1523.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/migrations/0005_auto_20200424_1528.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/migrations/0005_auto_20200424_1528.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/migrations/0006_auto_20200427_1250.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/migrations/0006_auto_20200427_1250.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/migrations/0007_auto_20200427_1310.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/migrations/0007_auto_20200427_1310.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/migrations/0008_auto_20200427_1444.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/migrations/0008_auto_20200427_1444.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/migrations/0009_auto_20200427_1534.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/migrations/0009_auto_20200427_1534.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/migrations/0010_auto_20200427_1536.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/migrations/0010_auto_20200427_1536.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/migrations/0011_auto_20200427_1542.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/migrations/0011_auto_20200427_1542.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/migrations/0012_auto_20200524_1254.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/migrations/0012_auto_20200524_1254.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/migrations/0013_auto_20200524_1911.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/migrations/0013_auto_20200524_1911.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/migrations/0014_auto_20200524_1931.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/migrations/0014_auto_20200524_1931.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/migrations/0015_auto_20200526_1544.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/migrations/0015_auto_20200526_1544.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/migrations/0016_auto_20200528_1458.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/migrations/0016_auto_20200528_1458.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/migrations/0017_auto_20200528_1502.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/migrations/0017_auto_20200528_1502.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/migrations/0018_auto_20200528_1504.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/migrations/0018_auto_20200528_1504.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/migrations/0019_auto_20200528_1529.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/migrations/0019_auto_20200528_1529.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/migrations/0020_auto_20200529_1810.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/migrations/0020_auto_20200529_1810.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/migrations/0021_auto_20200529_1818.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/migrations/0021_auto_20200529_1818.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/migrations/0022_auto_20200530_1935.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/migrations/0022_auto_20200530_1935.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/migrations/0023_auto_20200531_1550.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/migrations/0023_auto_20200531_1550.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/migrations/0024_auto_20200606_1219.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/migrations/0024_auto_20200606_1219.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/migrations/0025_auto_20200606_1422.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/migrations/0025_auto_20200606_1422.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/migrations/0026_auto_20200606_1423.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/migrations/0026_auto_20200606_1423.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/migrations/0027_auto_20200612_1219.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/migrations/0027_auto_20200612_1219.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/migrations/0028_auto_20200614_1116.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/migrations/0028_auto_20200614_1116.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/migrations/0029_auto_20200614_1910.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/migrations/0029_auto_20200614_1910.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/migrations/0030_personpassport.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/migrations/0030_personpassport.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/migrations/0031_auto_20200706_1416.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/migrations/0031_auto_20200706_1416.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/migrations/0032_auto_20200706_1421.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/migrations/0032_auto_20200706_1421.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/views_without_react.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/views_without_react.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -42,9 +388,6 @@
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
-  <component name="FavoritesManager">
-    <favorites_list name="pineappleApp" />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -70,13 +413,13 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -91,6 +434,7 @@
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PyCharm 2019.3.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -142,6 +486,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -189,89 +534,17 @@
       <workItem from="1595340243214" duration="805000" />
       <workItem from="1603638445485" duration="703000" />
       <workItem from="1603642110703" duration="6681000" />
-      <workItem from="1603651942100" duration="6053000" />
+      <workItem from="1603651942100" duration="7548000" />
+      <workItem from="1607091038737" duration="140000" />
+      <workItem from="1658838293043" duration="1000" />
     </task>
     <servers />
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="177" key="#ESLint" timestamp="1588854529670">
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1607091173492">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="177" key="#ESLint/0.0.1920.1040@0.0.1920.1040" timestamp="1588854529670" />
-    <state x="552" y="177" key="#Inspections" timestamp="1589203917364">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="177" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1589203917364" />
-    <state x="552" y="177" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587383927852">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="177" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587383927852" />
-    <state x="769" y="267" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589806448209">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="769" y="267" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1589806448209" />
-    <state x="769" y="267" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1589106531884" />
-    <state x="709" y="355" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1592398890121">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="709" y="355" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592398890121" />
-    <state x="718" y="390" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1590767239695">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="718" y="390" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1590767239695" />
-    <state x="584" y="113" key="CommitChangelistDialog2" timestamp="1591698630423">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="584" y="113" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1591698630422" />
-    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1587714440764">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587714440764" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1595340447458">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1592111601052" />
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1595340447458" />
-    <state width="1876" height="277" key="GridCell.Tab.0.bottom" timestamp="1587731010522">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1876" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1587660979023" />
-    <state width="1876" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587731010522" />
-    <state width="1876" height="277" key="GridCell.Tab.0.center" timestamp="1587731010522">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1876" height="277" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1587660979022" />
-    <state width="1876" height="277" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587731010522" />
-    <state width="1876" height="277" key="GridCell.Tab.0.left" timestamp="1587731010522">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1876" height="277" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1587660979022" />
-    <state width="1876" height="277" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587731010522" />
-    <state width="1876" height="277" key="GridCell.Tab.0.right" timestamp="1587731010522">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1876" height="277" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1587660979023" />
-    <state width="1876" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587731010522" />
-    <state x="818" y="112" key="SettingsEditor" timestamp="1592399883861">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="818" y="112" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1592399883861" />
-    <state x="690" y="324" key="com.intellij.database.dbimport.ImportUtil.MyDialog" timestamp="1591617496374">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="690" y="324" key="com.intellij.database.dbimport.ImportUtil.MyDialog/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1591617496374" />
-    <state x="690" y="324" key="com.intellij.database.dbimport.ImportUtil.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590912184514" />
-    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591698619508">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1591698619508" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1591790335045">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1591790335045" />
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1607091173492" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
